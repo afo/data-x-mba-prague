@@ -1,0 +1,7 @@
+theme: jekyll-theme-cayman
+title: "L2L Scientific Tracks 2020"
+description: "Official Website"
+github:
+  show_downloads: false
+  is_project_page: false
+  html_show_sourcelink: false
