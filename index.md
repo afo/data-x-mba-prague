@@ -4,7 +4,7 @@
 
 
 ## Course description
-The AI track will cover state-of-the art approaches for practical AI application development. We'll cover foundations, computer vision, natural language processing, deep reinforcement learning, generative adverserial networks, model deployment / maintenance, graph databases, and guest lectures will be given be AI entrepreneurs as well as researchers (at Uber and UC Berkeley).
+This course will teach you the commercial aspects of applied AI, data science, machine learning, and deep learning. At the same time you'll get a fundamental understanding of how to implement and build systems using state-of-the-art and open source tools.
 
 ## Resources and Prep-Material
 
