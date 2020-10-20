@@ -2,6 +2,26 @@
 
 **Course Dates**: Oct 21, 22, 24, 25
 
+**Schedule**
+
+![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus.png)
+
+## Links to lecture slides
+
+1. Day 1: [Link](https://docs.google.com/presentation/d/1MEuqU44FJNLZt4d5d5K38mclHIIxPU8NiL-ijrH3ZxE/edit?usp=sharing)
+2. Day 2:
+3. Day 3:
+4. Day 4:
+
+## Links to notebooks
+
+1. [Intro to Numpy](https://colab.research.google.com/drive/1oJI2b6t8KFtFoIjKtq3-g7R9rCeFIYot?usp=sharing)
+2. [Intro to Pandas](https://colab.research.google.com/drive/1b1ad0-3c-oKy0hKwYGOh-M556GbBKSA6?usp=sharing)
+3. [Titanic](https://colab.research.google.com/drive/1YKHJMmaRMyc8NrUo2uGTvb3NxUJu7CY_?usp=sharing)
+
+## Assignments
+
+1. [Python and Numpy Assignment, due Fri morning](https://colab.research.google.com/drive/1MQ15IKXXh_7RtaP0WKQ0gd6PuKgCN3yg?usp=sharing)
 
 ## Course description
 This course will teach you the commercial aspects of applied AI, data science, machine learning, and deep learning. At the same time you'll get a fundamental understanding of how to implement and build systems using state-of-the-art and open source tools.
@@ -40,10 +60,6 @@ To get a good, comprehensive understanding of the current state of AI we recomme
 * [Machine Learning, Coursera](https://www.coursera.org/learn/machine-learning)
 * [DataCamp](https://www.datacamp.com/)
 * [Deep Learning](http://www.deeplearningbook.org/) -- free PDF
-
-## Links to lecture slides
-
-1. To be posted
 
 ## Github repo
 
