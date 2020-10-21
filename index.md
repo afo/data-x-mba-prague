@@ -23,6 +23,8 @@
 ## Assignments
 
 1. [Python and Numpy Assignment, due Fri morning](https://colab.research.google.com/drive/1MQ15IKXXh_7RtaP0WKQ0gd6PuKgCN3yg?usp=sharing)
+2. [AI Use-case Canvas](http://bit.ly/mbabai)
+3. [Lowtech Demo Template](https://docs.google.com/presentation/d/1SJ4GldIKZeqo0rpNG-QyUjkzlBAXi08I1Pa-vEONz1Y/edit#slide=id.p1)
 
 ## Course description
 This course will teach you the commercial aspects of applied AI, data science, machine learning, and deep learning. At the same time you'll get a fundamental understanding of how to implement and build systems using state-of-the-art and open source tools.
