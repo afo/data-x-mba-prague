@@ -15,9 +15,10 @@
 
 ## Links to notebooks
 
-1. [Intro to Numpy](https://colab.research.google.com/drive/1oJI2b6t8KFtFoIjKtq3-g7R9rCeFIYot?usp=sharing)
-2. [Intro to Pandas](https://colab.research.google.com/drive/1b1ad0-3c-oKy0hKwYGOh-M556GbBKSA6?usp=sharing)
-3. [Titanic](https://colab.research.google.com/drive/1YKHJMmaRMyc8NrUo2uGTvb3NxUJu7CY_?usp=sharing)
+1. [Intro to Jupyter and Python](https://github.com/afo/data-x_prague20/blob/master/01-intro/python-jupyter-basics_shortest.ipynb)
+2. [Intro to Numpy](https://colab.research.google.com/drive/1oJI2b6t8KFtFoIjKtq3-g7R9rCeFIYot?usp=sharing)
+3. [Intro to Pandas](https://colab.research.google.com/drive/1b1ad0-3c-oKy0hKwYGOh-M556GbBKSA6?usp=sharing)
+4. [Titanic](https://colab.research.google.com/drive/1YKHJMmaRMyc8NrUo2uGTvb3NxUJu7CY_?usp=sharing)
 
 ## Assignments
 
