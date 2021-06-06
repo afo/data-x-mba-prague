@@ -1,2 +1,2 @@
-# Github Page repo for Data-X VSE Fall 2020
+# Github Page repo for Data-X VSE
 
