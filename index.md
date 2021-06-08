@@ -9,7 +9,7 @@
 ## Links to lecture slides
 
 1. Day 1: [Link](https://docs.google.com/presentation/d/1PS6J-ubZkI3f3Uy1lbTlK0uZy831OAccJb46XbeMByg/edit?usp=sharing)
-2. Day 2:
+2. Day 2: [Link](https://docs.google.com/presentation/d/1bbRQTKF7OyRpFQL0lFQGQGq8lRC2T7yu0mpcXYIM_do/edit?usp=sharing)
 3. Day 3:
 4. Day 4:
 
