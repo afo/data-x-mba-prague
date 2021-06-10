@@ -10,7 +10,7 @@
 
 1. Day 1: [Link](https://docs.google.com/presentation/d/1PS6J-ubZkI3f3Uy1lbTlK0uZy831OAccJb46XbeMByg/edit?usp=sharing)
 2. Day 2: [Link](https://docs.google.com/presentation/d/1bbRQTKF7OyRpFQL0lFQGQGq8lRC2T7yu0mpcXYIM_do/edit?usp=sharing)
-3. Day 3:
+3. Day 3: [Link](https://docs.google.com/presentation/d/1vFYB3jEyA9r0uECjc1NxC_YwV9ggp85X4-Fxb64mUSQ/edit?usp=sharing)
 4. Day 4:
 
 ## Links to notebooks
