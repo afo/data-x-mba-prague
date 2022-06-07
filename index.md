@@ -10,11 +10,11 @@
 
 ## Links to lecture slides
 
-1. Day 1: [Link](https://docs.google.com/presentation/d/1PS6J-ubZkI3f3Uy1lbTlK0uZy831OAccJb46XbeMByg/edit?usp=sharing)
-2. Day 2: [Link](https://docs.google.com/presentation/d/1bbRQTKF7OyRpFQL0lFQGQGq8lRC2T7yu0mpcXYIM_do/edit?usp=sharing)
-3. Day 3: [Link](https://docs.google.com/presentation/d/1vFYB3jEyA9r0uECjc1NxC_YwV9ggp85X4-Fxb64mUSQ/edit?usp=sharing)
-4. Day 4: [Link](https://docs.google.com/presentation/d/1bJZXJOxkLo79xW1DSBWzUG06wp0qWCqPcEIcwVr8Mv8/edit?usp=sharing)
-5. Day 5: To be Posted
+1. Day 1: [Link](https://docs.google.com/presentation/d/1Vgp2YJUeeFqhpe6Pef-aUysW3JjUs8aE6o5RipoDrzA/edit?usp=sharing)
+2. Day 2: TBD
+3. Day 3: TBD
+4. Day 4: TBD
+5. Day 5: TBD
 
 ## Links to notebooks
 
@@ -25,7 +25,7 @@
 
 ## Assignments
 
-1. [Python and Numpy Assignment, due Fri morning](https://colab.research.google.com/drive/1MQ15IKXXh_7RtaP0WKQ0gd6PuKgCN3yg?usp=sharing)
+1. [Python and Numpy Assignment](https://colab.research.google.com/drive/1MQ15IKXXh_7RtaP0WKQ0gd6PuKgCN3yg?usp=sharing)
 2. [AI Use-case Canvas](http://bit.ly/mbabai)
 3. [Lowtech Demo Template](https://docs.google.com/presentation/d/1SJ4GldIKZeqo0rpNG-QyUjkzlBAXi08I1Pa-vEONz1Y/edit#slide=id.p1)
 
