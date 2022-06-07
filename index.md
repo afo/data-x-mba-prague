@@ -1,17 +1,8 @@
 ## Data-X VSE
 
-**Final Workshop**: Sept 16 2021
-
-### Slide links
-
-1. Blockchain Intro: [Link](https://docs.google.com/presentation/d/18XoFGnb4M3-Bx56_NXn9J05LTqysoAyGmGhyurVOqX8/edit?usp=sharing)
-2. Hands-on Blockchain: [Link](https://docs.google.com/presentation/d/1j3YSFVZhGsMS6_NdR08lyLogaZ9UCHMU4aSrfvbLaCM/edit?usp=sharing)
-3. NN, CNNs, CV, Transfer Learning: [Link](https://docs.google.com/presentation/d/1UUhMseMj7XWnPcFuijCcMF3huRzfwIqkQUerWKWWkQw/edit?usp=sharing)
-4. Python notebook: [Link](https://colab.research.google.com/drive/1T6VC8z1OyXnfoq_Pv6IcixwmEgZMjpYa?usp=sharing)
-
 ### Data-X MBA Program
 
-**Course Dates**: June 7 - 11 2021
+**Course Dates**: June 8 - 12 2022
 
 **Schedule**
 
@@ -123,3 +114,13 @@ For students who need computing resources for the class project, it is recommend
     </tr>
   </tbody>
 </table>
+
+
+**Extra Workshop**
+
+### Slide links
+
+1. Blockchain Intro: [Link](https://docs.google.com/presentation/d/18XoFGnb4M3-Bx56_NXn9J05LTqysoAyGmGhyurVOqX8/edit?usp=sharing)
+2. Hands-on Blockchain: [Link](https://docs.google.com/presentation/d/1j3YSFVZhGsMS6_NdR08lyLogaZ9UCHMU4aSrfvbLaCM/edit?usp=sharing)
+3. NN, CNNs, CV, Transfer Learning: [Link](https://docs.google.com/presentation/d/1UUhMseMj7XWnPcFuijCcMF3huRzfwIqkQUerWKWWkQw/edit?usp=sharing)
+4. Python notebook: [Link](https://colab.research.google.com/drive/1T6VC8z1OyXnfoq_Pv6IcixwmEgZMjpYa?usp=sharing)
