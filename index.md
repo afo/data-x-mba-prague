@@ -23,6 +23,20 @@
 3. [Intro to Pandas](https://colab.research.google.com/drive/1b1ad0-3c-oKy0hKwYGOh-M556GbBKSA6?usp=sharing)
 4. [Titanic](https://colab.research.google.com/drive/1YKHJMmaRMyc8NrUo2uGTvb3NxUJu7CY_?usp=sharing)
 
+## Data-X MBA Final Presentation
+
+#### Presentation should contain:
+1. Assumptions
+2. Exploratory data analysis (clear graphs)
+3. Journey / Trials to get the results
+4. Data transformation / Feature Engineering steps
+5. Different models and algorithms used — 
+6. Results and chosen model
+7. Validation of results
+8. Areas of improvement
+9. Next steps
+
+
 ## Assignments
 
 1. [Python and Numpy Assignment](https://colab.research.google.com/drive/1MQ15IKXXh_7RtaP0WKQ0gd6PuKgCN3yg?usp=sharing)
