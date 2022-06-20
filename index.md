@@ -13,8 +13,8 @@
 1. Day 1: [Link](https://docs.google.com/presentation/d/1Vgp2YJUeeFqhpe6Pef-aUysW3JjUs8aE6o5RipoDrzA/edit?usp=sharing)
 2. Day 2: [Link](https://docs.google.com/presentation/d/14We1oGTd3q35V-ayVC1S-PISQ3a7INXcRhyJmPHXf_4/edit?usp=sharing)
 3. Day 3: [Link](https://docs.google.com/presentation/d/1kkBXoVgJvt3VUzARLVGZ5YsnyX0WKgfYOet5olnXhPE/edit?usp=sharing)
-4. Day 4: TBD
-5. Day 5: TBD
+4. Day 4: The NLP notebook can be found in the [Github repo]([github.com/afo/data-x_prague20](https://github.com/afo/data-x_prague20))
+5. Day 5: [Link](https://docs.google.com/presentation/d/1K3Z9N9lM3h4HiFK8Isse5vjywF9FuH3WHAHqAZ238JQ/edit?usp=sharing)
 
 ## Links to notebooks
 
