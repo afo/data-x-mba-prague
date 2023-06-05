@@ -10,11 +10,11 @@
 
 ## Links to lecture slides
 
-1. Day 1: [Link to slides](https://docs.google.com/presentation/d/1JEFbMEW6pCdACoPdLOdE3mC8hyhGO_YErC56K2_c11I/edit?usp=sharing)
-2. Day 2: 
-3. Day 3: 
-4. Day 4: 
-5. Day 5: 
+1. Day 1: [Link](https://docs.google.com/presentation/d/1Vgp2YJUeeFqhpe6Pef-aUysW3JjUs8aE6o5RipoDrzA/edit?usp=sharing)
+2. Day 2: [Link](https://docs.google.com/presentation/d/14We1oGTd3q35V-ayVC1S-PISQ3a7INXcRhyJmPHXf_4/edit?usp=sharing)
+3. Day 3: [Link](https://docs.google.com/presentation/d/1kkBXoVgJvt3VUzARLVGZ5YsnyX0WKgfYOet5olnXhPE/edit?usp=sharing)
+4. Day 4: The NLP notebook can be found in the [Github repo]([github.com/afo/data-x_prague20](https://github.com/afo/data-x_prague20))
+5. Day 5: [Link](https://docs.google.com/presentation/d/1K3Z9N9lM3h4HiFK8Isse5vjywF9FuH3WHAHqAZ238JQ/edit?usp=sharing)
 
 ## Links to notebooks
 
@@ -50,7 +50,7 @@ This course will teach you the commercial aspects of applied AI, data science, m
 
 #### Python training
 
-Go through the training video offered by CS50: Introduction to Programming with Python by Harvard University x freeCodeCamp: [Link](https://www.youtube.com/watch?v=nLRL_NcnK-4)
+Go through the training videos offered by Berkeley Institute for Data Science (BIDS): [Link](https://bids.berkeley.edu/news/python-boot-camp-fall-2016-training-videos-available-online)
 
 
 #### Machine Learning Theory
@@ -130,11 +130,11 @@ For students who need computing resources for the class project, it is recommend
 </table>
 
 
-**Extra Workshops**
+**Extra Workshop**
 
-### Topics
+### Slide links
 
-1. Blockchain Intro: 
-2. Hands-on Blockchain:
-3. NN, CNNs, CV, Transfer Learning:
-4. Python notebook:
+1. Blockchain Intro: [Link](https://docs.google.com/presentation/d/18XoFGnb4M3-Bx56_NXn9J05LTqysoAyGmGhyurVOqX8/edit?usp=sharing)
+2. Hands-on Blockchain: [Link](https://docs.google.com/presentation/d/1j3YSFVZhGsMS6_NdR08lyLogaZ9UCHMU4aSrfvbLaCM/edit?usp=sharing)
+3. NN, CNNs, CV, Transfer Learning: [Link](https://docs.google.com/presentation/d/1UUhMseMj7XWnPcFuijCcMF3huRzfwIqkQUerWKWWkQw/edit?usp=sharing)
+4. Python notebook: [Link](https://colab.research.google.com/drive/1T6VC8z1OyXnfoq_Pv6IcixwmEgZMjpYa?usp=sharing)
