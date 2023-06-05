@@ -2,7 +2,7 @@
 
 ### Data-X MBA Program
 
-**Course Dates**: June 8 - 12 2022
+**Course Dates**: June 7 - 11 2023
 
 **Schedule**
 
