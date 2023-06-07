@@ -72,7 +72,7 @@ If you want to run notebooks locally (recommended for simple experimentation) an
 
 To get a good, comprehensive understanding of the current state of AI we recommend that you read (or skim the following books):
 
-* [Hands on Machine Learning with Scikit-Learn and TensorFlow](https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/) -- get 2nd edition
+* [Hands on Machine Learning with Scikit-Learn and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/) -- get 3rd edition
 
 ## Other great learning sources
 
