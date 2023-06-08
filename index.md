@@ -81,6 +81,15 @@ To get a good, comprehensive understanding of the current state of AI we recomme
 * [DataCamp](https://www.datacamp.com/)
 * [Deep Learning](http://www.deeplearningbook.org/) -- free PDF
 
+
+## Time Series forecasting
+
+* [Intro to time series forecasting](https://wandb.ai/iamleonie/A-Gentle-Introduction-to-Time-Series-Analysis-Forecasting/reports/A-Gentle-Introduction-to-Time-Series-Analysis-Forecasting--VmlldzoyNjkxOTMz)
+* [Time Series forecasting with Prophet](https://www.kaggle.com/code/prashant111/tutorial-time-series-forecasting-with-prophet)
+* [Keras tutorials](https://keras.io/examples/timeseries/)
+* [LSTMs and time series](https://syedshan85.medium.com/window-based-time-series-forecasting-with-keras-lstm-6b664e7c54c4)
+* 
+
 ## Github repo
 
 #### [github.com/afo/data-x_prague20](https://github.com/afo/data-x_prague20)
