@@ -12,7 +12,7 @@
 
 1. Day 1: [Link to slides](https://docs.google.com/presentation/d/1JEFbMEW6pCdACoPdLOdE3mC8hyhGO_YErC56K2_c11I/edit?usp=sharing)
 2. Day 2: [Link](https://docs.google.com/presentation/d/19dLwgJZqzlNj-jjQX8vMlWeq1R7gCUcsZa2MCvrV6Xo/edit?usp=sharing)
-3. Day 3: 
+3. Day 3: [Link](https://docs.google.com/presentation/d/1MZt3ahlTv13Q5HhPcvfIgod88bEYCttUPh8dAWTpxkU/edit?usp=sharing)
 4. Day 4: 
 5. Day 5: 
 
