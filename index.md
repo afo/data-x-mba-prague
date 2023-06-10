@@ -10,10 +10,10 @@
 
 ## Links to lecture slides
 
-1. Day 1: [Link to slides](https://docs.google.com/presentation/d/1JEFbMEW6pCdACoPdLOdE3mC8hyhGO_YErC56K2_c11I/edit?usp=sharing)
+1. Day 1: [Link](https://docs.google.com/presentation/d/1JEFbMEW6pCdACoPdLOdE3mC8hyhGO_YErC56K2_c11I/edit?usp=sharing)
 2. Day 2: [Link](https://docs.google.com/presentation/d/19dLwgJZqzlNj-jjQX8vMlWeq1R7gCUcsZa2MCvrV6Xo/edit?usp=sharing)
 3. Day 3: [Link](https://docs.google.com/presentation/d/1MZt3ahlTv13Q5HhPcvfIgod88bEYCttUPh8dAWTpxkU/edit?usp=sharing)
-4. Day 4: 
+4. Day 4: [Link](https://docs.google.com/presentation/d/11vNVznLteINEz5Tu9RTjRDod30_6HTlBhx5wAOibqo0/edit#slide=id.g6135002c92_0_0)
 5. Day 5: 
 
 ## Links to notebooks
