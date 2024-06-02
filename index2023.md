@@ -2,7 +2,7 @@
 
 ### Data-X MBA Program
 
-**Course Dates**: June 5 - 9 2024
+**Course Dates**: June 7 - 11 2023
 
 **Schedule**
 
@@ -10,11 +10,11 @@
 
 ## Links to lecture slides
 
-1. Day 1: [Link]()
-2. Day 2: [Link]()
-3. Day 3: [Link]()
-4. Day 4: [Link]()
-5. Day 5: [Link]()
+1. Day 1: [Link](https://docs.google.com/presentation/d/1JEFbMEW6pCdACoPdLOdE3mC8hyhGO_YErC56K2_c11I/edit?usp=sharing)
+2. Day 2: [Link](https://docs.google.com/presentation/d/19dLwgJZqzlNj-jjQX8vMlWeq1R7gCUcsZa2MCvrV6Xo/edit?usp=sharing)
+3. Day 3: [Link](https://docs.google.com/presentation/d/1MZt3ahlTv13Q5HhPcvfIgod88bEYCttUPh8dAWTpxkU/edit?usp=sharing)
+4. Day 4: [Link](https://docs.google.com/presentation/d/11vNVznLteINEz5Tu9RTjRDod30_6HTlBhx5wAOibqo0/edit#slide=id.g6135002c92_0_0)
+5. Day 5: [Link](https://docs.google.com/presentation/d/1TTDN5KYUgrWDPYCO76bid97awbzsQAR9J_3O-MeL2kE/edit?usp=sharing)
 
 ## Links to notebooks
 
@@ -33,9 +33,8 @@
 5. Different models and algorithms used — 
 6. Results and chosen model
 7. Validation of results
-8. **Working Prototype**
-9. Areas of improvement
-10. Next steps
+8. Areas of improvement
+9. Next steps
 
 
 ## Assignments
@@ -93,12 +92,12 @@ To get a good, comprehensive understanding of the current state of AI we recomme
 
 ## Github repo
 
-#### [github.com/afo/data-x_prague](https://github.com/afo/data-x_prague)
+#### [github.com/afo/data-x_prague20](https://github.com/afo/data-x_prague20)
 
 
 ## Grading rubric
 
-- Project work (plus pitch) 50%
+- Lowtech demo (pitch your project) 50%
 - Assignments / Quizzes 35%
 - Participation 15%
 
