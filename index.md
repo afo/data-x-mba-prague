@@ -10,11 +10,11 @@
 
 ## Links to lecture slides
 
-1. Day 1: [Link]()
-2. Day 2: [Link]()
-3. Day 3: [Link]()
-4. Day 4: [Link]()
-5. Day 5: [Link]()
+1. Day 1: [Link](https://docs.google.com/presentation/d/1JEFbMEW6pCdACoPdLOdE3mC8hyhGO_YErC56K2_c11I/)
+2. Day 2:
+3. Day 3:
+4. Day 4:
+5. Day 5: 
 
 ## Links to notebooks
 
@@ -48,6 +48,11 @@
 This course will teach you the commercial aspects of applied AI, data science, machine learning, and deep learning. At the same time you'll get a fundamental understanding of how to implement and build systems using state-of-the-art and open source tools.
 
 ## Resources and Prep-Material
+
+#### LLM training and system building
+
+DeepLearning.AI offers courses on LLMs covering finetuning, LLMOps, LangChain, etc. All for free: [Link](deeplearning.ai)
+
 
 #### Python training
 
@@ -132,7 +137,7 @@ For students who need computing resources for the class project, it is recommend
 
     </tr>
     <tr>
-      <td><a href="http://scet.berkeley.edu/data-lab">SCET, Data Lab</a></td>
+          <td><a href="http://scet.berkeley.edu/data-lab">SCET, Data Lab</a></td>
 
 
     </tr>
