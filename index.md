@@ -51,7 +51,7 @@ This course will teach you the commercial aspects of applied AI, data science, m
 
 #### LLM training and system building
 
-DeepLearning.AI offers courses on LLMs covering finetuning, LLMOps, LangChain, etc. All for free: [Link](deeplearning.ai)
+**deeplearning.ai** offers courses on LLMs covering finetuning, LLMOps, LangChain, etc. All for free: [Link](https://deeplearning.ai)
 
 
 #### Python training
