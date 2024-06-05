@@ -98,7 +98,7 @@ To get a good, comprehensive understanding of the current state of AI we recomme
 
 ## Github repo
 
-#### [github.com/afo/data-x_prague](https://github.com/afo/data-x_prague)
+#### [github.com/afo/data-x-mba](https://github.com/afo/data-x-mba)
 
 
 ## Grading rubric
