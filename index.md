@@ -11,7 +11,7 @@
 ## Links to lecture slides
 
 1. Day 1: [Link](https://docs.google.com/presentation/d/1JEFbMEW6pCdACoPdLOdE3mC8hyhGO_YErC56K2_c11I/)
-2. Day 2:
+2. Day 2: [Link](https://docs.google.com/presentation/d/19dLwgJZqzlNj-jjQX8vMlWeq1R7gCUcsZa2MCvrV6Xo/edit#slide=id.g24f718d3f30_0_5055)
 3. Day 3:
 4. Day 4:
 5. Day 5: 
