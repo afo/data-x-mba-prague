@@ -14,7 +14,7 @@
 2. Day 2: [Link](https://docs.google.com/presentation/d/19dLwgJZqzlNj-jjQX8vMlWeq1R7gCUcsZa2MCvrV6Xo/edit#slide=id.g24f718d3f30_0_5055)
 3. Day 3: [Link](https://docs.google.com/presentation/d/1MZt3ahlTv13Q5HhPcvfIgod88bEYCttUPh8dAWTpxkU/edit?usp=sharing), [Ikhlaq slides](https://docs.google.com/presentation/d/18EhbX23Tm51qRNiPLvMgROdGqM_FOmmF/edit#slide=id.p1)
 4. Day 4: [Link](https://docs.google.com/presentation/d/11vNVznLteINEz5Tu9RTjRDod30_6HTlBhx5wAOibqo0/edit#slide=id.g2504a2c18cb_0_1416)
-5. Day 5: 
+5. Day 5: [Link](https://docs.google.com/presentation/d/1TTDN5KYUgrWDPYCO76bid97awbzsQAR9J_3O-MeL2kE/edit#slide=id.g2e45b841389_0_3504) 
 
 ## Links to notebooks
 
