@@ -2,23 +2,26 @@
 
 ### Data-X MBA Program
 
-**Course Dates**: Sept 8-9 and June 11 - 15 2024
+**Course Dates**: June 5 - 9 2024
 
 **Schedule**
 
-<!--![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2024.png)-->
+![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2024.png)
 
-## Links to September lecture slides
+## Links to lecture slides
 
-1. Day 1: 
-2. Day 2: 
+1. Day 1: [Link](https://docs.google.com/presentation/d/1JEFbMEW6pCdACoPdLOdE3mC8hyhGO_YErC56K2_c11I/)
+2. Day 2: [Link](https://docs.google.com/presentation/d/19dLwgJZqzlNj-jjQX8vMlWeq1R7gCUcsZa2MCvrV6Xo/edit#slide=id.g24f718d3f30_0_5055)
+3. Day 3: [Link](https://docs.google.com/presentation/d/1MZt3ahlTv13Q5HhPcvfIgod88bEYCttUPh8dAWTpxkU/edit?usp=sharing), [Ikhlaq slides](https://docs.google.com/presentation/d/18EhbX23Tm51qRNiPLvMgROdGqM_FOmmF/edit#slide=id.p1)
+4. Day 4: [Link](https://docs.google.com/presentation/d/11vNVznLteINEz5Tu9RTjRDod30_6HTlBhx5wAOibqo0/edit#slide=id.g2504a2c18cb_0_1416)
+5. Day 5: [Link](https://docs.google.com/presentation/d/1TTDN5KYUgrWDPYCO76bid97awbzsQAR9J_3O-MeL2kE/edit#slide=id.g2e45b841389_0_3504) 
 
 ## Links to notebooks
 
 1. [Intro to Jupyter and Python](https://github.com/afo/data-x_prague20/blob/master/01-intro/python-jupyter-basics_shortest.ipynb)
 2. [Intro to Numpy](https://colab.research.google.com/drive/1oJI2b6t8KFtFoIjKtq3-g7R9rCeFIYot?usp=sharing)
 3. [Intro to Pandas](https://colab.research.google.com/drive/1b1ad0-3c-oKy0hKwYGOh-M556GbBKSA6?usp=sharing)
-<!--4. [Titanic](https://colab.research.google.com/drive/1YKHJMmaRMyc8NrUo2uGTvb3NxUJu7CY_?usp=sharing)-->
+4. [Titanic](https://colab.research.google.com/drive/1YKHJMmaRMyc8NrUo2uGTvb3NxUJu7CY_?usp=sharing)
 
 ## Data-X MBA Final Presentation
 
@@ -37,6 +40,9 @@
 
 ## Assignments
 
+1. [Python and Numpy Assignment](https://colab.research.google.com/drive/1MQ15IKXXh_7RtaP0WKQ0gd6PuKgCN3yg?usp=sharing)
+2. [AI Use-case Canvas](http://bit.ly/mbabai)
+3. [Lowtech Demo Template](https://docs.google.com/presentation/d/1SJ4GldIKZeqo0rpNG-QyUjkzlBAXi08I1Pa-vEONz1Y/edit#slide=id.p1)
 
 ## Course description
 This course will teach you the commercial aspects of applied AI, data science, machine learning, and deep learning. At the same time you'll get a fundamental understanding of how to implement and build systems using state-of-the-art and open source tools.
