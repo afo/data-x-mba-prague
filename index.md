@@ -8,7 +8,7 @@
 
 **Schedule**
 
-<!--![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2024.png)-->
+![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2024.png)
 
 ## Links to September lecture slides
 
