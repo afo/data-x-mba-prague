@@ -12,7 +12,7 @@
 
 ## Links to September lecture slides
 
-1. Day 1: 
+1. Day 1: [Link](https://docs.google.com/presentation/d/12-U5X1aRfCdZOpxuLN-G4CESxkg9AW9LSJsB0nqwq6g/edit?usp=sharing)
 2. Day 2: 
 
 ## Links to notebooks
