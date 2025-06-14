@@ -12,7 +12,12 @@
 
 ## Links to June 2025 materials:
 
-1. Day 1: [Link]()
+1. Day 1: [Link](https://docs.google.com/presentation/d/1NfTDfCx3piVgLCsJk2z216WFgXdMRQwEw3Vyvh-5Nvs/edit?usp=sharing)
+2. Day 2: [Link](https://docs.google.com/presentation/d/1-7UB8mXbsBFi_Z-1Dp-Ds0XNZvMwDSaTIPepX4v4nWY/edit?usp=sharing)
+3. Day 3: 
+
+
+* Tool recommendations: [Link](https://docs.google.com/spreadsheets/d/1LyUyAtrmy5VHi8jTrQkGfWst7Qhr5mm-sUg5ResU4mg/edit?usp=sharing)
 
 
 
