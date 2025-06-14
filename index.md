@@ -12,8 +12,8 @@
 
 ## Links to June 2025 materials:
 
-1. Day 1: [Link](https://docs.google.com/presentation/d/1NfTDfCx3piVgLCsJk2z216WFgXdMRQwEw3Vyvh-5Nvs/edit?usp=sharing)
-2. Day 2: [Link](https://docs.google.com/presentation/d/1-7UB8mXbsBFi_Z-1Dp-Ds0XNZvMwDSaTIPepX4v4nWY/edit?usp=sharing)
+1. Day 1: [Link](https://docs.google.com/presentation/d/1VrsflXFRIavW5tISm5XYPzFd7Q0x1o1zt3wNl2f2sz0/edit?usp=sharing)
+2. Day 2: [Link](https://docs.google.com/presentation/d/1xYr_Lu45v1bj-YKjdfuhETn5NWz4i12hWRzZpxLN5Eg/edit?usp=sharing)
 3. Day 3: 
 
 
