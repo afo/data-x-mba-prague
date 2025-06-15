@@ -12,9 +12,14 @@
 
 ## Links to June 2025 materials:
 
-1. Day 1: [Link](https://docs.google.com/presentation/d/1VrsflXFRIavW5tISm5XYPzFd7Q0x1o1zt3wNl2f2sz0/edit?usp=sharing)
-2. Day 2: [Link](https://docs.google.com/presentation/d/1xYr_Lu45v1bj-YKjdfuhETn5NWz4i12hWRzZpxLN5Eg/edit?usp=sharing)
-3. Day 3: 
+1. Day 1: [Link](https://docs.google.com/presentation/d/1YJRoHZbGeiZk-LZBNUB_coCjbKXzSkkwHJfaIZ5NEtI/edit?usp=sharing)
+2. Day 2: [Link](https://docs.google.com/presentation/d/1Hoj0LdQ--AO1iaobcmZycDLk3QLlM6FGm--qdsK0GTk/edit?usp=sharing)
+3. Day 3: [Link](https://docs.google.com/presentation/d/1ANT93m8YMCEhukY9d8TUSsdggOONbN5aV8gQ1iKDWYk/edit?usp=sharing)
+
+
+* Titanic notebook: [Link](bit.ly/predli-webscraping)
+* Websraping notebook: [Link](bit.ly/predli-webscraping)
+
 
 
 * Tool recommendations: [Link](https://docs.google.com/spreadsheets/d/1LyUyAtrmy5VHi8jTrQkGfWst7Qhr5mm-sUg5ResU4mg/edit?usp=sharing)
