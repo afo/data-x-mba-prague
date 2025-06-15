@@ -147,7 +147,7 @@ For students who need computing resources for the class project, it is recommend
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://alex.fo/">Alexander Fred-Ojala</a> <br>(Instructor)</td>
+      <td><a href="https://linkedin.com/in/alexanderfo">Alexander Fred-Ojala (Linkedin link)</a> <br>(Instructor)</td>
 
 
     </tr>
