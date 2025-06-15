@@ -30,6 +30,7 @@
 
 1. Day 1: [Link](https://docs.google.com/presentation/d/12-U5X1aRfCdZOpxuLN-G4CESxkg9AW9LSJsB0nqwq6g/edit?usp=sharing)
 2. Day 2: [Link](https://docs.google.com/presentation/d/1lwaMHzJEXauL4iTN0iejIe2CaVOlxH4CIDeMzI9QxuQ/edit?usp=sharing)
+
 2.1 Matous materials: [LLM intro](https://docs.google.com/presentation/d/1gFcNq7b4DBWg1q1zcHdBZaCxF3cxkZS2yPm8oSPaSLs/edit?usp=sharing), [Prompt Engineering slides](https://docs.google.com/presentation/d/13UoqulDbBDoB-9ByMxGVOwZLr2FHd9aCDOEGSyZ3yDk/edit?usp=sharing), [Prompt Engineering notebook](https://colab.research.google.com/drive/1EIp-crCym8jhPjAI0H8Gg50b1D7JK1ZP?usp=sharing)
 
 
