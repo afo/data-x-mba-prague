@@ -3,20 +3,43 @@
 ### Data-X MBA Program
 
 **Course Dates**: 
-* Nov 1-2 2024
-* June 2025
+* Nov 8-9 2024
+* June 12 - 15 2025
 
 **Schedule**
 
 ![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2025-june.png)
 
-## Links to Nov 2025 materials:
+## Links to June 2025 materials:
 
-1. Day 1: [Link](https://docs.google.com/presentation/d/18hQDZ2fmXt_OOeSE0viE09cnlMb7p2gIh3a9ERjUew8/edit?slide=id.g39f2ef08b92_0_1122#slide=id.g39f2ef08b92_0_1122)
+1. Day 1: [Link](https://docs.google.com/presentation/d/1YJRoHZbGeiZk-LZBNUB_coCjbKXzSkkwHJfaIZ5NEtI/edit?usp=sharing)
+2. Day 2: [Link](https://docs.google.com/presentation/d/1Hoj0LdQ--AO1iaobcmZycDLk3QLlM6FGm--qdsK0GTk/edit?usp=sharing)
+3. Day 3: [Link](https://docs.google.com/presentation/d/1ANT93m8YMCEhukY9d8TUSsdggOONbN5aV8gQ1iKDWYk/edit?usp=sharing)
+
+
+* Titanic notebook: [Link](bit.ly/predli-webscraping)
+* Websraping notebook: [Link](bit.ly/predli-webscraping)
 
 
 
 * Tool recommendations: [Link](https://docs.google.com/spreadsheets/d/1LyUyAtrmy5VHi8jTrQkGfWst7Qhr5mm-sUg5ResU4mg/edit?usp=sharing)
+
+
+
+## Links to November lecture slides
+
+1. Day 1: [Link](https://docs.google.com/presentation/d/12-U5X1aRfCdZOpxuLN-G4CESxkg9AW9LSJsB0nqwq6g/edit?usp=sharing)
+2. Day 2: [Link](https://docs.google.com/presentation/d/1lwaMHzJEXauL4iTN0iejIe2CaVOlxH4CIDeMzI9QxuQ/edit?usp=sharing)
+
+2.1 Matous materials: [LLM intro](https://docs.google.com/presentation/d/1gFcNq7b4DBWg1q1zcHdBZaCxF3cxkZS2yPm8oSPaSLs/edit?usp=sharing), [Prompt Engineering slides](https://docs.google.com/presentation/d/13UoqulDbBDoB-9ByMxGVOwZLr2FHd9aCDOEGSyZ3yDk/edit?usp=sharing), [Prompt Engineering notebook](https://colab.research.google.com/drive/1EIp-crCym8jhPjAI0H8Gg50b1D7JK1ZP?usp=sharing)
+
+
+## Links to notebooks
+
+1. [Intro to Jupyter and Python](https://github.com/afo/data-x_prague20/blob/master/01-intro/python-jupyter-basics_shortest.ipynb)
+2. [Intro to Numpy](https://colab.research.google.com/drive/1oJI2b6t8KFtFoIjKtq3-g7R9rCeFIYot?usp=sharing)
+3. [Intro to Pandas](https://colab.research.google.com/drive/1b1ad0-3c-oKy0hKwYGOh-M556GbBKSA6?usp=sharing)
+<!--4. [Titanic](https://colab.research.google.com/drive/1YKHJMmaRMyc8NrUo2uGTvb3NxUJu7CY_?usp=sharing)-->
 
 ## Data-X MBA Final Presentation
 
@@ -118,7 +141,6 @@ For students who need computing resources for the class project, it is recommend
   <thead>
     <tr>
       <th style="width: 10%;"><img src="assets/imgs/alex.jpg" alt="Alexander Fred-Ojala" style="width:300px"></th>
-      <th style="width: 10%;"><img src="assets/imgs/mz.jpeg" alt="MZ" style="width:300px"></th>
 
 
     </tr>
@@ -126,13 +148,11 @@ For students who need computing resources for the class project, it is recommend
   <tbody>
     <tr>
       <td><a href="https://linkedin.com/in/alexanderfo">Alexander Fred-Ojala (Linkedin link)</a> <br>(Instructor)</td>
-      <td><a href="https://linkedin.com/in/alexanderfo">Alexander Fred-Ojala (Linkedin link)</a> <br>(Instructor)</td>
 
 
     </tr>
     <tr>
           <td><a href="http://scet.berkeley.edu/data-lab">SCET, Data Lab</a></td>
-          <td><a href="https://predli.com">Predli</a></td>
 
 
     </tr>
