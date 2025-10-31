@@ -124,7 +124,7 @@ For students who need computing resources for the class project, it is recommend
   <tbody>
     <tr>
       <td><a href="https://linkedin.com/in/alexanderfo">Alexander Fred-Ojala (Linkedin link)</a> <br>(Instructor)</td>
-      <td><a href="https://linkedin.com/in/alexanderfo">Alexander Fred-Ojala (Linkedin link)</a> <br>(Instructor)</td>
+      <td><a href="https://www.linkedin.com/in/marcuszethraeus/">Marcus Zethraeus (Linkedin link)</a> <br>(Instructor)</td>
 
 
     </tr>
