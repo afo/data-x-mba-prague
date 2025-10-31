@@ -6,9 +6,7 @@
 * Nov 1-2 2024
 * June 2025
 
-**Schedule**
-
-![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2025-june.png)
+<!--![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2025-june.png)-->
 
 ## Links to Nov 2025 materials:
 
