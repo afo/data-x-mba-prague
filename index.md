@@ -10,7 +10,7 @@
 
 ## Links to Nov 2025 materials:
 
-1. Day 1: [Link](https://docs.google.com/presentation/d/18hQDZ2fmXt_OOeSE0viE09cnlMb7p2gIh3a9ERjUew8/edit?slide=id.g39f2ef08b92_0_1122#slide=id.g39f2ef08b92_0_1122)
+1. Day 1: [Slides](https://docs.google.com/presentation/d/18hQDZ2fmXt_OOeSE0viE09cnlMb7p2gIh3a9ERjUew8/edit?slide=id.g39f2ef08b92_0_1122#slide=id.g39f2ef08b92_0_1122), [Problem set](https://docs.google.com/document/u/1/d/1pLVd4G-IlOxJaYZZQuhUeON04Nv7KWPtF2-uOgzKWaU/edit?tab=t.w6w73xh9ptzd#heading=h.huxu5m7gzrfb)
 
 
 
