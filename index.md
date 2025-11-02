@@ -48,10 +48,14 @@ This course will teach you the commercial aspects of applied AI, data science, m
 
 Go through the training video offered by CS50: Introduction to Programming with Python by Harvard University x freeCodeCamp: [Link](https://www.youtube.com/watch?v=nLRL_NcnK-4)
 
+* [Shorter 2024 video from CS50](https://www.youtube.com/watch?v=0eNc5lJfZFM)
 
-#### Machine Learning Theory
+
+#### Machine Learning and LLM Theory
 
 Read through this excellent non-technical overview of Machine Learning and Data science: [Link](https://vas3k.com/blog/machine_learning/)
+
+Andrej Kaparthy's excellent intro to LLMs: [Link](https://www.youtube.com/watch?v=zjkBMFhNj_g)
 
 
 #### Install Instructions (Anaconda)
@@ -68,11 +72,11 @@ If you want to run notebooks locally (recommended for simple experimentation) an
 
 To get a good, comprehensive understanding of the current state of AI we recommend that you read (or skim the following books):
 
-* [Hands on Machine Learning with Scikit-Learn and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/) -- get 3rd edition
+* [Hands on Machine Learning with Scikit-Learn and Pytorch](https://www.waterstones.com/book/hands-on-machine-learning-with-scikit-learn-and-pytorch/aurelien-geron//9798341607989) -- get 2025 Pytorch edition
 
 ## Other great learning sources
 
-* [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf) -- free PDF
+* [Introduction to Statistical Learning](https://www.statlearning.com/) -- free PDF
 * [Machine Learning, Coursera](https://www.coursera.org/learn/machine-learning)
 * [DataCamp](https://www.datacamp.com/)
 * [Deep Learning](http://www.deeplearningbook.org/) -- free PDF
@@ -82,8 +86,6 @@ To get a good, comprehensive understanding of the current state of AI we recomme
 
 * [Intro to time series forecasting](https://wandb.ai/iamleonie/A-Gentle-Introduction-to-Time-Series-Analysis-Forecasting/reports/A-Gentle-Introduction-to-Time-Series-Analysis-Forecasting--VmlldzoyNjkxOTMz)
 * [Time Series forecasting with Prophet](https://www.kaggle.com/code/prashant111/tutorial-time-series-forecasting-with-prophet)
-* [Keras tutorials](https://keras.io/examples/timeseries/)
-* [LSTMs and time series](https://syedshan85.medium.com/window-based-time-series-forecasting-with-keras-lstm-6b664e7c54c4)
 * 
 
 ## Github repo
