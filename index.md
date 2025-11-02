@@ -3,8 +3,8 @@
 ### Data-X MBA Program
 
 **Course Dates**: 
-* Nov 1-2 2024
-* June 2025
+* Nov 1-2 2025
+* June 2026
 
 <!--![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2025-june.png)-->
 
