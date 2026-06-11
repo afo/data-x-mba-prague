@@ -4,14 +4,9 @@
 
 **Course Dates**: 
 * Nov 1-2 2025
-* June 12-14 2026
+* June 2026
 
 <!--![](https://alex.fo/data-x-mba-prague/assets/imgs/syllabus2025-june.png)-->
-
-## Links to June 2026 materials:
-
-1. Friday: [Slides]()
-
 
 ## Links to Nov 2025 materials:
 
