@@ -10,7 +10,7 @@
 
 ## Links to June 2026 materials:
 
-1. Friday: [Slides]()
+1. Friday Day 1: [Slides](https://docs.google.com/presentation/d/1BHyxNmpQtiLSRxb3JcDp_c3Vb1Q9jJeW1z-lmVHHg0M/)
 
 
 ## Links to Nov 2025 materials:
