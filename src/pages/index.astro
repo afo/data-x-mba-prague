@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import LogoMarquee from '../components/LogoMarquee.astro';
+import About from '../components/About.astro';
+import Schedule from '../components/Schedule.astro';
+import LearningPath from '../components/LearningPath.astro';
+import BuildWithAI from '../components/BuildWithAI.astro';
+import FinalProject from '../components/FinalProject.astro';
+import Readings from '../components/Readings.astro';
+import Instructors from '../components/Instructors.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base>
+  <Nav />
+  <main>
+    <Hero />
+    <LogoMarquee />
+    <About />
+    <Schedule />
+    <LearningPath />
+    <BuildWithAI />
+    <FinalProject />
+    <Readings />
+    <Instructors />
+    <FAQ />
+  </main>
+  <Footer />
+</Base>
+
+<script>
+  import { initMotion } from '../scripts/motion';
+  import { initClock } from '../scripts/clock';
+  import { initCanvas } from '../scripts/neural-canvas';
+  import { site } from '../data/site';
+
+  function boot() {
+    initClock(site.geo.tz);
+    initCanvas();
+    initMotion();
+  }
+
+  // Runs on first load AND after every view transition.
+  document.addEventListener('astro:page-load', boot);
+</script>

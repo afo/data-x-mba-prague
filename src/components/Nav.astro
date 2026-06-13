@@ -1,0 +1,169 @@
+---
+import { site } from '../data/site';
+
+const links = [
+  { label: 'About', href: '#about' },
+  { label: 'Schedule', href: '#schedule' },
+  { label: 'Learn', href: '#learn' },
+  { label: 'Build', href: '#build' },
+  { label: 'Project', href: '#project' },
+  { label: 'Team', href: '#team' },
+];
+---
+
+<header id="nav" class="nav" data-nav>
+  <div class="container-x nav__inner">
+    <a href="#top" class="nav__brand" aria-label={`${site.shortTitle} — home`}>
+      <span class="nav__logo">Data-X</span>
+      <span class="nav__sep" aria-hidden="true">/</span>
+      <span class="nav__sub">Prague</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      {links.map((l) => <a href={l.href} class="nav__link">{l.label}</a>)}
+    </nav>
+
+    <a href="#schedule" class="btn btn-primary nav__cta">Course materials</a>
+
+    <button class="nav__burger" data-burger aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__drawer" data-drawer hidden>
+    {links.map((l) => <a href={l.href} class="nav__drawer-link" data-drawer-link>{l.label}</a>)}
+    <a href={`mailto:${site.contactEmail}`} class="nav__drawer-link">Contact</a>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 50;
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+    border-bottom: 1px solid transparent;
+  }
+  .nav.is-scrolled {
+    background: color-mix(in srgb, var(--color-base) 78%, transparent);
+    backdrop-filter: blur(14px) saturate(1.4);
+    border-bottom-color: var(--color-line);
+  }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    height: 4.6rem;
+  }
+  .nav__brand {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    font-size: 1.3rem;
+  }
+  .nav__sep { color: var(--color-accent); }
+  .nav__sub {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    transform: translateY(-1px);
+  }
+  .nav__links {
+    display: none;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+  .nav__link {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    color: var(--color-slate);
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav__link::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -6px;
+    width: 100%; height: 1.5px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-out-expo);
+  }
+  .nav__link:hover { color: var(--color-ink); }
+  .nav__link:hover::after { transform: scaleX(1); }
+  .nav__cta { display: none; }
+
+  .nav__burger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 2.5rem; height: 2.5rem;
+    margin-left: auto;
+    background: none; border: none; cursor: pointer;
+  }
+  .nav__burger span {
+    display: block;
+    height: 1.5px;
+    width: 22px;
+    margin-inline: auto;
+    background: var(--color-ink);
+    transition: transform 0.35s var(--ease-out-expo), opacity 0.3s ease;
+  }
+  .nav__burger[aria-expanded='true'] span:first-child { transform: translateY(3.25px) rotate(45deg); }
+  .nav__burger[aria-expanded='true'] span:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+
+  .nav__drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem clamp(1.25rem, 5vw, 4rem) 1.5rem;
+    background: color-mix(in srgb, var(--color-base) 92%, transparent);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--color-line);
+  }
+  .nav__drawer-link {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    letter-spacing: -0.03em;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  @media (min-width: 880px) {
+    .nav__links { display: inline-flex; }
+    .nav__cta { display: inline-flex; }
+    .nav__burger { display: none; }
+    .nav__drawer { display: none !important; }
+  }
+</style>
+
+<script>
+  const nav = document.querySelector('[data-nav]');
+  const onScroll = () => nav?.classList.toggle('is-scrolled', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const burger = document.querySelector('[data-burger]');
+  const drawer = document.querySelector('[data-drawer]') as HTMLElement | null;
+  burger?.addEventListener('click', () => {
+    const open = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!open));
+    if (drawer) drawer.hidden = open;
+  });
+  document.querySelectorAll('[data-drawer-link]').forEach((l) =>
+    l.addEventListener('click', () => {
+      burger?.setAttribute('aria-expanded', 'false');
+      if (drawer) drawer.hidden = true;
+    }),
+  );
+</script>

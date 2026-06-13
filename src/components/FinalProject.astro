@@ -1,0 +1,136 @@
+---
+import { finalPresentation, grading } from '../data/course';
+---
+
+<section id="project" class="section project">
+  <div class="container-x project__grid">
+    <div class="project__intro">
+      <p class="eyebrow" data-reveal>The final deliverable</p>
+      <h2 class="font-display section-title" data-reveal>
+        Ship a working prototype — and pitch it.
+      </h2>
+      <p class="project__lede" data-reveal>
+        Your final presentation should tell the whole story of your data-science journey,
+        ending in something that actually runs.
+      </p>
+
+      <div class="rubric" data-reveal>
+        <span class="eyebrow">Grading rubric</span>
+        <ul class="rubric__list">
+          {grading.map((g) => (
+            <li class="rubric__item">
+              <div class="rubric__row">
+                <span class="rubric__label">{g.label}</span>
+                <span class="rubric__pct font-display">{g.weight}%</span>
+              </div>
+              <div class="rubric__bar" role="presentation">
+                <span class="rubric__fill" data-bar style={`--w:${g.weight}%`}></span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <ol class="checklist" aria-label="Presentation requirements">
+      {finalPresentation.map((item, i) => (
+        <li class="checklist__item" data-reveal>
+          <span class="checklist__num font-display">{String(i + 1).padStart(2, '0')}</span>
+          <span class={`checklist__text ${item === 'Working prototype' ? 'is-key' : ''}`}>
+            {item}
+            {item === 'Working prototype' && <span class="checklist__star" aria-hidden="true"> ✷</span>}
+          </span>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .project { background: var(--color-ink); color: var(--color-base); }
+  .project .eyebrow { color: var(--color-muted); }
+  .project__grid {
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    grid-template-columns: 1fr;
+  }
+  .project .section-title { color: var(--color-base); }
+  .project__lede {
+    margin-top: 1.5rem;
+    max-width: 44ch;
+    color: color-mix(in srgb, var(--color-base) 78%, transparent);
+    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  }
+
+  .rubric { margin-top: clamp(2.5rem, 5vw, 4rem); }
+  .rubric__list { list-style: none; margin: 1.2rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 1.3rem; }
+  .rubric__row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; }
+  .rubric__label { font-size: 0.98rem; color: color-mix(in srgb, var(--color-base) 85%, transparent); }
+  .rubric__pct { font-size: 1.3rem; font-weight: 500; color: var(--color-accent-bright); }
+  .rubric__bar {
+    height: 4px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-base) 14%, transparent);
+    overflow: hidden;
+  }
+  .rubric__fill {
+    display: block;
+    height: 100%;
+    width: var(--w);
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-bright));
+    transition: transform 1.1s var(--ease-out-expo);
+  }
+  .rubric__fill.is-in { transform: scaleX(1); }
+
+  .checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: none;
+    display: grid;
+    gap: 0;
+  }
+  .checklist__item {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-base) 14%, transparent);
+    transition: padding-left 0.4s var(--ease-out-expo);
+  }
+  .checklist__item:hover { padding-left: 0.6rem; }
+  .checklist__num {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    min-width: 2.2rem;
+  }
+  .checklist__text { font-size: clamp(1.1rem, 1.8vw, 1.5rem); letter-spacing: -0.01em; }
+  .checklist__text.is-key { color: var(--color-accent-bright); font-weight: 500; }
+  .checklist__star { color: var(--color-accent); }
+
+  @media (min-width: 900px) {
+    .project__grid { grid-template-columns: 1fr 1fr; align-items: start; }
+  }
+</style>
+
+<script>
+  // Animate rubric bars when they scroll into view
+  const bars = document.querySelectorAll('[data-bar]');
+  if (bars.length) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in');
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
+    bars.forEach((b) => io.observe(b));
+  }
+</script>

@@ -1,0 +1,60 @@
+---
+import { readings, timeSeries } from '../data/course';
+---
+
+<section id="readings" class="section readings">
+  <div class="container-x">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Readings & references</p>
+      <h2 class="font-display section-title">Books & deeper references</h2>
+    </div>
+
+    <div class="readings__grid">
+      {readings.map((r) => (
+        <a href={r.href} target="_blank" rel="noopener noreferrer" class="read card" data-reveal>
+          <h3 class="read__title">{r.title}</h3>
+          <p class="read__note">{r.note}</p>
+          <span class="rcard__go"><span class="link-underline">View</span><span aria-hidden="true">↗</span></span>
+        </a>
+      ))}
+    </div>
+
+    <div class="ts" data-reveal>
+      <span class="eyebrow">Bonus · Time-series forecasting</span>
+      <ul class="ts__list">
+        {timeSeries.map((t) => (
+          <li>
+            <a href={t.href} target="_blank" rel="noopener noreferrer" class="ts__link">
+              <span class="ts__title link-underline">{t.title}</span>
+              <span class="ts__note">{t.note}</span>
+              <span class="ts__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .readings__grid {
+    display: grid;
+    gap: 1.1rem;
+    grid-template-columns: 1fr;
+  }
+  .read { padding: 1.6rem; display: flex; flex-direction: column; }
+  .read__title { font-size: 1.15rem; font-weight: 500; margin: 0; letter-spacing: -0.01em; }
+  .read__note { margin: 0.7rem 0 1.3rem; color: var(--color-slate); font-size: 0.95rem; flex: 1; }
+  .rcard__go { display: inline-flex; align-items: center; gap: 0.45rem; font-family: var(--font-mono); font-size: 0.8rem; }
+  .rcard__go span[aria-hidden] { color: var(--color-accent); }
+
+  .ts { margin-top: clamp(2.5rem, 5vw, 4rem); border-top: 1px solid var(--color-line); padding-top: 2rem; }
+  .ts__list { list-style: none; margin: 1.2rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 1rem; }
+  .ts__link { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
+  .ts__title { font-size: 1.1rem; font-weight: 500; }
+  .ts__note { color: var(--color-muted); font-size: 0.9rem; }
+  .ts__arrow { color: var(--color-accent); }
+
+  @media (min-width: 720px) { .readings__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1080px) { .readings__grid { grid-template-columns: repeat(3, 1fr); } }
+</style>

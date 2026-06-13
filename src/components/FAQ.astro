@@ -1,0 +1,82 @@
+---
+import { faqs } from '../data/course';
+---
+
+<section id="faq" class="section faq">
+  <div class="container-x faq__grid">
+    <div class="faq__intro">
+      <p class="eyebrow" data-reveal>Good to know</p>
+      <h2 class="font-display section-title" data-reveal>FAQ</h2>
+    </div>
+
+    <div class="faq__list" data-reveal>
+      {faqs.map((f, i) => (
+        <details class="faq__item" open={i === 0}>
+          <summary class="faq__q">
+            <span>{f.q}</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__a">
+            <p>{f.a}</p>
+            {f.links && (
+              <p class="faq__links">
+                {f.links.map((l) => (
+                  <a href={l.href} target="_blank" rel="noopener noreferrer" class="link-underline">
+                    {l.label} ↗
+                  </a>
+                ))}
+              </p>
+            )}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq__grid {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-columns: 1fr;
+  }
+  .faq__item {
+    border-top: 1px solid var(--color-line);
+    padding: 0.4rem 0;
+  }
+  .faq__item:last-child { border-bottom: 1px solid var(--color-line); }
+  .faq__q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    list-style: none;
+    padding: 1.2rem 0;
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .faq__q::-webkit-details-marker { display: none; }
+  .faq__icon { position: relative; width: 16px; height: 16px; flex: none; }
+  .faq__icon::before, .faq__icon::after {
+    content: '';
+    position: absolute;
+    background: var(--color-accent);
+    transition: transform 0.35s var(--ease-out-expo);
+  }
+  .faq__icon::before { top: 50%; left: 0; width: 100%; height: 1.5px; transform: translateY(-50%); }
+  .faq__icon::after { left: 50%; top: 0; width: 1.5px; height: 100%; transform: translateX(-50%); }
+  details[open] .faq__icon::after { transform: translateX(-50%) scaleY(0); }
+  .faq__a {
+    padding: 0 0 1.4rem;
+    max-width: 60ch;
+    color: var(--color-slate);
+  }
+  .faq__a p { margin: 0; }
+  .faq__links { margin-top: 0.9rem !important; display: flex; flex-wrap: wrap; gap: 1.2rem; }
+
+  @media (min-width: 860px) {
+    .faq__grid { grid-template-columns: 0.6fr 1fr; align-items: start; }
+  }
+</style>

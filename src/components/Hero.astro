@@ -1,0 +1,170 @@
+---
+import { site } from '../data/site';
+---
+
+<section id="top" class="hero">
+  <canvas class="hero__canvas" data-neural aria-hidden="true"></canvas>
+  <div class="hero__veil" aria-hidden="true"></div>
+
+  <div class="container-x hero__inner">
+    <p class="eyebrow hero__eyebrow" data-hero-fade>
+      <span class="hero__dot" aria-hidden="true"></span>
+      {site.course} · {site.school}
+    </p>
+
+    <h1 class="font-display hero__title">
+      <span class="split-line"><span data-hero-line>Applied</span></span>
+      <span class="split-line"><span data-hero-line>AI for <em>builders.</em></span></span>
+    </h1>
+
+    <p class="hero__lede" data-hero-fade>
+      A hands-on MBA intensive on data science, machine learning and deep learning —
+      from first principles to a working prototype, using state-of-the-art open-source tools.
+    </p>
+
+    <div class="hero__actions" data-hero-fade>
+      <a href="#learn" class="btn btn-primary">Explore the learning path →</a>
+      <a href="#schedule" class="btn btn-ghost">Course materials</a>
+    </div>
+  </div>
+
+  <div class="container-x hero__meta" data-hero-fade>
+    <div class="hero__meta-item">
+      <span class="eyebrow">Location</span>
+      <span class="hero__meta-val">{site.geo.label}</span>
+      <span class="hero__coords">{site.geo.lat} · {site.geo.lon}</span>
+    </div>
+    <div class="hero__meta-item hero__meta-clock">
+      <span class="eyebrow">Local time</span>
+      <span class="hero__meta-val live-clock" data-live-clock>—:—:—</span>
+    </div>
+    <a class="hero__scroll" href="#about" aria-label="Scroll to content">
+      <span class="eyebrow">Scroll</span>
+      <span class="hero__scroll-line" aria-hidden="true"></span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+    overflow: hidden;
+  }
+  .hero__canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  /* Soft radial vignette so text always reads (Stripe-gradient feel, Predli palette) */
+  .hero__veil {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      radial-gradient(120% 90% at 12% 18%, color-mix(in srgb, var(--color-base) 30%, transparent), transparent 60%),
+      linear-gradient(180deg, transparent 55%, var(--color-base) 100%);
+    pointer-events: none;
+  }
+  .hero__inner {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.6rem;
+  }
+  .hero__dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 60%, transparent);
+    animation: pulse 2.4s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 55%, transparent); }
+    70% { box-shadow: 0 0 0 12px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+  .hero__title {
+    font-size: var(--text-display);
+    line-height: var(--text-display--line-height);
+    font-weight: 400;
+    margin: 0;
+    max-width: 16ch;
+  }
+  .hero__title em {
+    font-style: italic;
+    color: var(--color-accent);
+  }
+  .hero__lede {
+    margin-top: 2rem;
+    max-width: 46ch;
+    font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+    color: var(--color-slate);
+  }
+  .hero__actions {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+  .hero__meta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    padding-bottom: 2.5rem;
+    margin-top: 3rem;
+  }
+  .hero__meta-item { display: flex; flex-direction: column; gap: 0.3rem; }
+  .hero__meta-val {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--color-ink);
+  }
+  .hero__coords { font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-muted); }
+  .hero__scroll {
+    margin-left: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .hero__scroll-line {
+    width: 1px; height: 48px;
+    background: linear-gradient(var(--color-ink), transparent);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero__scroll-line::after {
+    content: '';
+    position: absolute; top: -50%; left: 0;
+    width: 1px; height: 50%;
+    background: var(--color-accent);
+    animation: scrolldown 1.8s var(--ease-out-expo) infinite;
+  }
+  @keyframes scrolldown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(200%); }
+  }
+  @media (min-width: 720px) {
+    .hero__scroll { display: flex; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__dot, .hero__scroll-line::after { animation: none; }
+  }
+</style>

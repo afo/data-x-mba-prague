@@ -1,0 +1,263 @@
+---
+import { learningPath, playgrounds } from '../data/resources';
+---
+
+<section id="learn" class="section learn">
+  <div class="container-x">
+    <div class="section-head learn__head" data-reveal>
+      <p class="eyebrow">The learning path</p>
+      <h2 class="font-display section-title">
+        From intuition to attention — <span class="learn__hl">a curated route through modern AI.</span>
+      </h2>
+      <p class="learn__intro">
+        Hand-picked, mostly free resources that take you from “what is machine learning?”
+        all the way to building a transformer. Follow it top to bottom, or jump to your level.
+      </p>
+    </div>
+
+    <!-- Custom interactive visual: animated attention / neural network -->
+    <figure class="learn__viz" data-reveal>
+      <canvas data-attention aria-hidden="true"></canvas>
+      <figcaption class="learn__viz-cap">
+        <span class="eyebrow">Live · self-attention</span>
+        <span>Every token attends to every other — the idea behind transformers, animated.</span>
+      </figcaption>
+    </figure>
+
+    <ol class="path">
+      {learningPath.map((level) => (
+        <li class="path__level" id={`level-${level.id}`}>
+          <div class="path__marker" data-reveal>
+            <span class="path__index font-display">{level.index}</span>
+            <span class="path__rail" aria-hidden="true"></span>
+          </div>
+
+          <div class="path__content">
+            <header class="path__lvl-head" data-reveal>
+              <p class="eyebrow path__kicker">{level.kicker}</p>
+              <h3 class="font-display path__title">{level.title}</h3>
+              <p class="path__desc">{level.desc}</p>
+            </header>
+
+            <div class="path__cards">
+              {level.resources.map((r) => (
+                <a
+                  href={r.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class={`rcard card ${r.featured ? 'is-featured' : ''}`}
+                  data-reveal
+                >
+                  <div class="rcard__top">
+                    <span class="rcard__format">{r.format}</span>
+                    {r.featured && <span class="rcard__pill">Interactive</span>}
+                  </div>
+                  <h4 class="rcard__title">{r.title}</h4>
+                  {r.author && <p class="rcard__author">{r.author}</p>}
+                  <p class="rcard__desc">{r.desc}</p>
+                  <span class="rcard__go">
+                    <span class="link-underline">Open resource</span>
+                    <span aria-hidden="true">↗</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <!-- Featured interactive playgrounds -->
+    <div class="play" id="level-playgrounds">
+      <div class="play__head" data-reveal>
+        <p class="eyebrow">05 · Play with it</p>
+        <h3 class="font-display path__title">Interactive playgrounds</h3>
+        <p class="path__desc">The fastest way to build intuition: tinker with real models in your browser.</p>
+      </div>
+      <div class="play__grid">
+        {playgrounds.map((p) => (
+          <a href={p.href} target="_blank" rel="noopener noreferrer" class="pcard card" data-reveal>
+            <div class="pcard__frame" aria-hidden="true">
+              <span class="pcard__dots"><i></i><i></i><i></i></span>
+              <span class="pcard__tag">{p.tag}</span>
+              <div class="pcard__glow"></div>
+            </div>
+            <div class="pcard__body">
+              <h4 class="rcard__title">{p.title}</h4>
+              <p class="rcard__author">{p.author}</p>
+              <p class="rcard__desc">{p.desc}</p>
+              <span class="rcard__go"><span class="link-underline">Launch</span><span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .learn { background: var(--color-base); }
+  .learn__head { max-width: 70rem; }
+  .learn__hl { color: var(--color-accent); }
+  .learn__intro {
+    margin-top: 1.5rem;
+    max-width: 56ch;
+    color: var(--color-slate);
+    font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+  }
+
+  .learn__viz {
+    position: relative;
+    width: 100%;
+    margin: clamp(2.5rem, 5vw, 4rem) 0 clamp(3rem, 7vw, 6rem);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background: var(--color-ink);
+    border: 1px solid var(--color-ink);
+    /* Fluid fixed height (avoids aspect-ratio + min-height forcing extra width) */
+    height: clamp(300px, 42vw, 480px);
+  }
+  .learn__viz canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .learn__viz-cap {
+    position: absolute;
+    left: clamp(1.2rem, 3vw, 2.2rem);
+    bottom: clamp(1.2rem, 3vw, 2.2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: var(--color-base);
+    max-width: 38ch;
+    font-size: 0.95rem;
+  }
+  .learn__viz-cap .eyebrow { color: var(--color-accent-bright); }
+
+  /* Numbered path */
+  .path { list-style: none; margin: 0; padding: 0; }
+  .path__level {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  }
+  .path__marker { display: flex; flex-direction: column; align-items: center; }
+  .path__index {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 500;
+    color: var(--color-accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .path__rail {
+    flex: 1;
+    width: 1px;
+    margin-top: 0.8rem;
+    background: linear-gradient(var(--color-line), transparent);
+  }
+  .path__lvl-head { margin-bottom: 1.8rem; }
+  .path__kicker { color: var(--color-muted); }
+  .path__title {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 400;
+    margin: 0.5rem 0 0;
+    letter-spacing: -0.03em;
+  }
+  .path__desc { margin: 0.9rem 0 0; max-width: 56ch; color: var(--color-slate); }
+
+  .path__cards {
+    display: grid;
+    gap: 1.1rem;
+    grid-template-columns: 1fr;
+  }
+  .rcard {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    height: 100%;
+  }
+  .rcard.is-featured {
+    border-color: color-mix(in srgb, var(--color-accent) 40%, var(--color-line));
+    background: linear-gradient(180deg, var(--color-accent-soft), var(--color-paper) 55%);
+  }
+  .rcard__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .rcard__format {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .rcard__pill {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--color-accent);
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+  }
+  .rcard__title { font-size: 1.2rem; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+  .rcard__author { font-family: var(--font-mono); font-size: 0.74rem; color: var(--color-accent); margin: 0.4rem 0 0; }
+  .rcard__desc { margin: 0.8rem 0 1.4rem; color: var(--color-slate); font-size: 0.96rem; flex: 1; }
+  .rcard__go {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-ink);
+  }
+  .rcard__go span[aria-hidden] { color: var(--color-accent); }
+
+  /* Playgrounds */
+  .play { padding-top: clamp(1rem, 3vw, 2rem); }
+  .play__head { margin-bottom: 2rem; }
+  .play__grid {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr;
+  }
+  .pcard { overflow: hidden; display: flex; flex-direction: column; }
+  .pcard__frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background:
+      radial-gradient(80% 120% at 80% 0%, color-mix(in srgb, var(--color-accent) 55%, transparent), transparent 60%),
+      radial-gradient(90% 120% at 0% 100%, color-mix(in srgb, var(--color-mist) 90%, transparent), transparent 55%),
+      var(--color-ink);
+    overflow: hidden;
+  }
+  .pcard__dots { position: absolute; top: 0.9rem; left: 0.9rem; display: inline-flex; gap: 0.4rem; }
+  .pcard__dots i { width: 8px; height: 8px; border-radius: 50%; background: color-mix(in srgb, var(--color-base) 40%, transparent); }
+  .pcard__tag {
+    position: absolute;
+    bottom: 0.9rem; left: 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-base);
+  }
+  .pcard__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(40% 60% at 50% 50%, color-mix(in srgb, var(--color-accent) 30%, transparent), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .pcard:hover .pcard__glow { opacity: 1; }
+  .pcard__body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+
+  @media (min-width: 720px) {
+    .path__cards { grid-template-columns: repeat(2, 1fr); }
+    .play__grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 1100px) {
+    .path__cards { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>

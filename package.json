@@ -1,0 +1,23 @@
+{
+  "name": "data-x-mba-prague",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Data-X MBA Program — VŠE Prague. Applied AI, data science, machine learning & deep learning.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/host-grotesk": "^5.2.8",
+    "@fontsource/dm-mono": "^5.2.7",
+    "@tailwindcss/vite": "^4.3.1",
+    "astro": "^5.18.2",
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.23",
+    "split-type": "^0.3.4",
+    "tailwindcss": "^4.3.1"
+  }
+}

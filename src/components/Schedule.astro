@@ -1,0 +1,114 @@
+---
+import { sessions } from '../data/course';
+---
+
+<section id="schedule" class="section schedule">
+  <div class="container-x">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Schedule & materials</p>
+      <h2 class="font-display section-title">Cohorts & course materials</h2>
+    </div>
+
+    <div class="schedule__list">
+      {sessions.map((s) => (
+        <article class={`sched card ${s.status === 'upcoming' ? 'sched--up' : ''}`} data-reveal>
+          <div class="sched__head">
+            <div>
+              <span class={`sched__badge ${s.status === 'upcoming' ? 'is-up' : ''}`}>
+                {s.status === 'upcoming' ? 'Next cohort' : 'Past cohort'}
+              </span>
+              <h3 class="sched__dates font-display">{s.dates}</h3>
+            </div>
+            <span class="sched__term">{s.term}</span>
+          </div>
+
+          <p class="sched__blurb">{s.blurb}</p>
+
+          <ul class="sched__materials">
+            {s.materials.map((m) => (
+              <li>
+                <a href={m.href} target="_blank" rel="noopener noreferrer" class="sched__link">
+                  <span class="link-underline">{m.label}</span>
+                  <span class="sched__arrow" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-head { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+  .section-title {
+    font-size: var(--text-h2);
+    font-weight: 400;
+    margin: 0.8rem 0 0;
+    letter-spacing: -0.03em;
+  }
+  .schedule__list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  .sched { padding: clamp(1.6rem, 3vw, 2.5rem); }
+  .sched--up {
+    background: var(--color-ink);
+    color: var(--color-base);
+    border-color: var(--color-ink);
+  }
+  .sched__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .sched__badge {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .sched__badge.is-up { color: var(--color-accent-bright); }
+  .sched__dates {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 500;
+    margin: 0.4rem 0 0;
+    letter-spacing: -0.03em;
+  }
+  .sched__term {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-muted);
+  }
+  .sched__blurb {
+    margin: 1.2rem 0 1.6rem;
+    max-width: 52ch;
+    color: var(--color-slate);
+  }
+  .sched--up .sched__blurb { color: color-mix(in srgb, var(--color-base) 75%, transparent); }
+  .sched__materials {
+    list-style: none;
+    margin: 0;
+    padding: 1.4rem 0 0;
+    border-top: 1px solid var(--color-line);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .sched--up .sched__materials { border-top-color: color-mix(in srgb, var(--color-base) 18%, transparent); }
+  .sched__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.05rem;
+  }
+  .sched__arrow { color: var(--color-accent); transition: transform 0.3s var(--ease-out-expo); }
+  .sched__link:hover .sched__arrow { transform: translate(3px, -3px); }
+  @media (min-width: 820px) {
+    .schedule__list { grid-template-columns: 1fr 1fr; align-items: start; }
+  }
+</style>

@@ -1,0 +1,107 @@
+---
+import { pythonResources, aiCoding, businessResources } from '../data/resources';
+import { installSteps } from '../data/course';
+
+const columns = [
+  { id: 'python', kicker: 'Track A', title: 'Learn Python', items: pythonResources },
+  { id: 'aicoding', kicker: 'Track B', title: 'Build with AI agents', items: aiCoding },
+  { id: 'business', kicker: 'Track C', title: 'The business of AI', items: businessResources },
+];
+---
+
+<section id="build" class="section build">
+  <div class="container-x">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Build with AI</p>
+      <h2 class="font-display section-title">
+        Tools & tracks to <span class="build__hl">ship something real.</span>
+      </h2>
+      <p class="learn__intro">
+        Get fluent in Python, learn to build with AI coding agents like Claude Code and Codex,
+        and understand the commercial strategy behind it all.
+      </p>
+    </div>
+
+    <div class="build__cols">
+      {columns.map((col) => (
+        <div class="build__col" data-reveal>
+          <div class="build__col-head">
+            <span class="eyebrow">{col.kicker}</span>
+            <h3 class="font-display build__col-title">{col.title}</h3>
+          </div>
+          <ul class="build__list">
+            {col.items.map((r) => (
+              <li class="build__item">
+                <a href={r.href} target="_blank" rel="noopener noreferrer" class="build__link">
+                  <div class="build__item-top">
+                    <span class="build__item-title link-underline">{r.title}</span>
+                    <span class="build__arrow" aria-hidden="true">↗</span>
+                  </div>
+                  {r.author && <span class="build__item-author">{r.author}</span>}
+                  <p class="build__item-desc">{r.desc}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Setup / install instructions -->
+    <div class="setup" data-reveal>
+      <div class="setup__intro">
+        <span class="eyebrow">Get set up</span>
+        <h3 class="font-display build__col-title">Run the notebooks</h3>
+      </div>
+      <div class="setup__cards">
+        {installSteps.map((s) => (
+          <div class="setup__card card">
+            <h4 class="rcard__title">{s.title}</h4>
+            <p class="setup__body">{s.body}</p>
+            {s.href && (
+              <a href={s.href} target="_blank" rel="noopener noreferrer" class="btn btn-ghost setup__cta">
+                {s.cta} →
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .build { background: var(--color-paper); border-block: 1px solid var(--color-line); }
+  .build__hl { color: var(--color-accent); }
+  .build__cols {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+  }
+  .build__col-head { padding-bottom: 1.2rem; border-bottom: 1px solid var(--color-line); margin-bottom: 1.4rem; }
+  .build__col-title {
+    font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+    font-weight: 400;
+    margin: 0.5rem 0 0;
+    letter-spacing: -0.02em;
+  }
+  .build__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.3rem; }
+  .build__item-top { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
+  .build__item-title { font-size: 1.05rem; font-weight: 500; }
+  .build__arrow { color: var(--color-accent); transition: transform 0.3s var(--ease-out-expo); }
+  .build__link:hover .build__arrow { transform: translate(3px, -3px); }
+  .build__item-author { display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-accent); margin-top: 0.3rem; }
+  .build__item-desc { margin: 0.5rem 0 0; color: var(--color-slate); font-size: 0.94rem; }
+
+  .setup { margin-top: clamp(3rem, 6vw, 5rem); }
+  .setup__intro { margin-bottom: 1.6rem; }
+  .setup__cards { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+  .setup__card { padding: 1.8rem; }
+  .setup__body { margin: 0.8rem 0 1.4rem; color: var(--color-slate); }
+  .setup__cta { margin-top: auto; }
+
+  @media (min-width: 760px) {
+    .build__cols { grid-template-columns: repeat(3, 1fr); align-items: start; }
+    .setup__cards { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import { site } from '../data/site';
+import { workshops } from '../data/course';
+---
+
+<footer class="footer">
+  <div class="container-x">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#top" class="footer__logo font-display">Data-X<span aria-hidden="true">.</span></a>
+        <p class="footer__tag">{site.course} · {site.school}</p>
+        <a href={`mailto:${site.contactEmail}`} class="footer__email link-underline">{site.contactEmail}</a>
+      </div>
+
+      <div class="footer__col">
+        <span class="eyebrow">Repository</span>
+        <a href={site.repo} target="_blank" rel="noopener noreferrer" class="footer__link">github.com/afo/data-x-mba ↗</a>
+        <a href="https://github.com/afo/data-x-mba-prague/tree/master/archive" target="_blank" rel="noopener noreferrer" class="footer__link">Past cohorts (archive) ↗</a>
+      </div>
+
+      <div class="footer__col">
+        <span class="eyebrow">Extra workshops</span>
+        <ul class="footer__workshops">
+          {workshops.map((w) => <li>{w}</li>)}
+        </ul>
+      </div>
+
+      <div class="footer__col footer__clock">
+        <span class="eyebrow">{site.geo.label}</span>
+        <span class="footer__time live-clock font-display" data-live-clock>—:—:—</span>
+        <span class="footer__coords">{site.geo.lat} · {site.geo.lon}</span>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© {new Date().getFullYear()} Data-X · Built with Astro + Claude Code.</p>
+      <p class="footer__credit">Design language inspired by Predli.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-ink);
+    color: var(--color-base);
+    padding-block: clamp(3.5rem, 7vw, 6rem) 2.5rem;
+  }
+  .footer__top {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-base) 14%, transparent);
+  }
+  .footer__logo { font-size: 2rem; font-weight: 500; letter-spacing: -0.04em; }
+  .footer__logo span { color: var(--color-accent); }
+  .footer__tag { margin: 0.6rem 0 1rem; color: color-mix(in srgb, var(--color-base) 70%, transparent); font-size: 0.95rem; }
+  .footer__col { display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer__col .eyebrow { color: var(--color-muted); margin-bottom: 0.4rem; }
+  .footer__link { color: color-mix(in srgb, var(--color-base) 85%, transparent); font-size: 0.92rem; transition: color 0.3s ease; }
+  .footer__link:hover { color: var(--color-accent-bright); }
+  .footer__workshops { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; color: color-mix(in srgb, var(--color-base) 75%, transparent); font-size: 0.9rem; }
+  .footer__time { font-size: 1.6rem; font-weight: 500; color: var(--color-base); font-variant-numeric: tabular-nums; }
+  .footer__coords { font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-muted); }
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    color: var(--color-muted);
+  }
+  .footer__bottom p { margin: 0; }
+  @media (min-width: 760px) {
+    .footer__top { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+  }
+</style>

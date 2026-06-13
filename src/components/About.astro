@@ -1,0 +1,68 @@
+---
+import { courseDescription, stats } from '../data/course';
+---
+
+<section id="about" class="section about">
+  <div class="container-x">
+    <p class="eyebrow" data-reveal>What this is</p>
+
+    <h2 class="font-display about__statement" data-reveal>
+      The commercial side of applied AI — and the engineering to
+      <span class="about__hl">actually build it.</span>
+    </h2>
+
+    <p class="about__body" data-reveal>{courseDescription}</p>
+
+    <div class="about__stats">
+      {stats.map((s) => (
+        <div class="about__stat" data-reveal>
+          <span class="about__stat-val font-display" data-count={s.value}>{s.value}</span>
+          <span class="about__stat-label">{s.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section { padding-block: var(--section-pad); }
+  .about__statement {
+    font-size: var(--text-h1);
+    font-weight: 400;
+    max-width: 18ch;
+    margin: 1.5rem 0 0;
+    line-height: 1.02;
+  }
+  .about__hl { color: var(--color-accent); }
+  .about__body {
+    margin-top: 2rem;
+    max-width: 60ch;
+    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+    color: var(--color-slate);
+  }
+  .about__stats {
+    margin-top: clamp(3rem, 6vw, 5rem);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+    border-top: 1px solid var(--color-line);
+    padding-top: 2.5rem;
+  }
+  .about__stat { display: flex; flex-direction: column; gap: 0.4rem; }
+  .about__stat-val {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    color: var(--color-ink);
+  }
+  .about__stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: var(--color-muted);
+    max-width: 18ch;
+  }
+  @media (min-width: 760px) {
+    .about__stats { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
