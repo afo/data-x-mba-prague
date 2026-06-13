@@ -1,0 +1,112 @@
+---
+// Renders src/data/materials.md — the single, easy-to-edit source for
+// slides & lecture materials. Edit that file to add new links.
+import { Content as MaterialsContent } from '../data/materials.md';
+---
+
+<section id="materials" class="section materials-sec">
+  <div class="container-x materials__grid">
+    <aside class="materials__intro" data-reveal>
+      <p class="eyebrow">
+        <span class="materials__dot" aria-hidden="true"></span>
+        Course materials
+      </p>
+      <h2 class="font-display materials__title">Slides &amp; lecture materials</h2>
+      <p class="materials__note">
+        Everything from class — slides, problem sets and tools. Latest at the top.
+      </p>
+    </aside>
+
+    <div class="materials__content" data-reveal>
+      <MaterialsContent />
+    </div>
+  </div>
+</section>
+
+<style>
+  .materials-sec {
+    padding-block: clamp(3.5rem, 7vw, 6rem);
+    background: var(--color-paper);
+    border-bottom: 1px solid var(--color-line);
+  }
+  .materials__grid {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-columns: 1fr;
+  }
+  .materials__dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    margin-right: 0.5rem;
+    transform: translateY(0.5px);
+  }
+  .materials__title {
+    font-size: var(--text-h2);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin: 0.8rem 0 0;
+  }
+  .materials__note { margin-top: 1rem; max-width: 36ch; color: var(--color-slate); }
+
+  /* Rendered markdown */
+  .materials__content :global(h2) {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 2rem 0 0.9rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .materials__content :global(h2:first-child) { margin-top: 0; }
+  .materials__content :global(ul) {
+    list-style: none;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .materials__content :global(li) { margin: 0; }
+  .materials__content :global(a) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, padding-left 0.4s var(--ease-out-expo), border-color 0.3s ease;
+  }
+  .materials__content :global(a::after) {
+    content: '↗';
+    color: var(--color-accent);
+    font-weight: 400;
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+  .materials__content :global(a:hover) {
+    color: var(--color-accent);
+    padding-left: 0.6rem;
+    border-bottom-color: var(--color-line);
+  }
+  .materials__content :global(a:hover::after) { transform: translate(3px, -3px); }
+
+  @media (min-width: 860px) {
+    .materials__grid { grid-template-columns: 0.7fr 1fr; align-items: start; }
+    .materials__intro { position: sticky; top: 6rem; }
+  }
+</style>
+
+<script>
+  // Open external material links in a new tab, safely.
+  document.querySelectorAll<HTMLAnchorElement>('.materials__content a[href^="http"]').forEach((a) => {
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  });
+</script>

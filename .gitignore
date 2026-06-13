@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# --- Node / Astro (added for the rebuilt site) ---
+node_modules/
+dist/
+.astro/
+.DS_Store
+.playwright-mcp/
+npm-debug.log*

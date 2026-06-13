@@ -11,9 +11,10 @@ export type Session = {
   dates: string;
   status: 'upcoming' | 'past';
   blurb: string;
-  materials: Material[];
 };
 
+// Cohort dates only. Slides & lecture materials live in src/data/materials.md
+// (rendered by the prominent "Course materials" section near the top of the page).
 export const sessions: Session[] = [
   {
     id: 'june-2026',
@@ -21,12 +22,6 @@ export const sessions: Session[] = [
     dates: 'June 12–14, 2026',
     status: 'upcoming',
     blurb: 'The next cohort. Three intensive days of applied AI, from fundamentals to a working prototype.',
-    materials: [
-      {
-        label: 'Friday · Day 1 — Slides',
-        href: 'https://docs.google.com/presentation/d/1BHyxNmpQtiLSRxb3JcDp_c3Vb1Q9jJeW1z-lmVHHg0M/',
-      },
-    ],
   },
   {
     id: 'nov-2025',
@@ -34,20 +29,6 @@ export const sessions: Session[] = [
     dates: 'Nov 1–2, 2025',
     status: 'past',
     blurb: 'Weekend intensive covering the data science workflow, machine learning and modern LLM tooling.',
-    materials: [
-      {
-        label: 'Day 1 — Slides',
-        href: 'https://docs.google.com/presentation/d/18hQDZ2fmXt_OOeSE0viE09cnlMb7p2gIh3a9ERjUew8/edit?slide=id.g39f2ef08b92_0_1122#slide=id.g39f2ef08b92_0_1122',
-      },
-      {
-        label: 'Day 1 — Problem set',
-        href: 'https://docs.google.com/document/u/1/d/1pLVd4G-IlOxJaYZZQuhUeON04Nv7KWPtF2-uOgzKWaU/edit?tab=t.w6w73xh9ptzd#heading=h.huxu5m7gzrfb',
-      },
-      {
-        label: 'Tool recommendations',
-        href: 'https://docs.google.com/spreadsheets/d/1LyUyAtrmy5VHi8jTrQkGfWst7Qhr5mm-sUg5ResU4mg/edit?usp=sharing',
-      },
-    ],
   },
 ];
 

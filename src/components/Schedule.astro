@@ -24,16 +24,10 @@ import { sessions } from '../data/course';
 
           <p class="sched__blurb">{s.blurb}</p>
 
-          <ul class="sched__materials">
-            {s.materials.map((m) => (
-              <li>
-                <a href={m.href} target="_blank" rel="noopener noreferrer" class="sched__link">
-                  <span class="link-underline">{m.label}</span>
-                  <span class="sched__arrow" aria-hidden="true">↗</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <a href="#materials" class="sched__link sched__materials-link">
+            <span class="link-underline">View materials</span>
+            <span class="sched__arrow" aria-hidden="true">↑</span>
+          </a>
         </article>
       ))}
     </div>
@@ -90,16 +84,12 @@ import { sessions } from '../data/course';
     color: var(--color-slate);
   }
   .sched--up .sched__blurb { color: color-mix(in srgb, var(--color-base) 75%, transparent); }
-  .sched__materials {
-    list-style: none;
-    margin: 0;
-    padding: 1.4rem 0 0;
+  .sched__materials-link {
+    margin-top: 0.4rem;
+    padding-top: 1.4rem;
     border-top: 1px solid var(--color-line);
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
   }
-  .sched--up .sched__materials { border-top-color: color-mix(in srgb, var(--color-base) 18%, transparent); }
+  .sched--up .sched__materials-link { border-top-color: color-mix(in srgb, var(--color-base) 18%, transparent); }
   .sched__link {
     display: inline-flex;
     align-items: center;

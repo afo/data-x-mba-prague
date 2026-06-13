@@ -2,13 +2,13 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-// Deployed to GitHub Pages as a PROJECT page:
-//   https://afo.github.io/data-x-mba-prague/
-// `site` + `base` make Astro emit correct absolute URLs for assets and links.
-// To switch to a custom domain later: set `site` to the domain, `base` to '/',
-// and add a public/CNAME file.
+// Deployed to GitHub Pages as a PROJECT page under the account's custom domain:
+//   https://alex.fo/data-x-mba-prague/   (also https://afo.github.io/data-x-mba-prague/)
+// `site` is used for canonical/OG absolute URLs; `base` prefixes all assets & links.
+// The custom domain `alex.fo` is configured on the account's main Pages site, so
+// this project repo must NOT contain its own CNAME file.
 export default defineConfig({
-  site: 'https://afo.github.io',
+  site: 'https://alex.fo',
   base: '/data-x-mba-prague',
   trailingSlash: 'ignore',
   vite: {
