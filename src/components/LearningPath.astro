@@ -9,7 +9,7 @@ import { learningPath, playgrounds } from '../data/resources';
       <h2 class="font-display section-title">
         From intuition to attention — <span class="learn__hl">a curated route through modern AI.</span>
       </h2>
-      <p class="learn__intro">
+      <p class="section-intro">
         Hand-picked, mostly free resources that take you from “what is machine learning?”
         all the way to building a transformer. Follow it top to bottom, or jump to your level.
       </p>
@@ -99,12 +99,6 @@ import { learningPath, playgrounds } from '../data/resources';
   .learn { background: var(--color-base); }
   .learn__head { max-width: 70rem; }
   .learn__hl { color: var(--color-accent); }
-  .learn__intro {
-    margin-top: 1.5rem;
-    max-width: 56ch;
-    color: var(--color-slate);
-    font-size: clamp(1.02rem, 1.4vw, 1.2rem);
-  }
 
   .learn__viz {
     position: relative;
@@ -112,8 +106,8 @@ import { learningPath, playgrounds } from '../data/resources';
     margin: clamp(2.5rem, 5vw, 4rem) 0 clamp(3rem, 7vw, 6rem);
     border-radius: 1.5rem;
     overflow: hidden;
-    background: var(--color-ink);
-    border: 1px solid var(--color-ink);
+    background: var(--color-invert);
+    border: 1px solid var(--color-invert);
     /* Fluid fixed height (avoids aspect-ratio + min-height forcing extra width) */
     height: clamp(300px, 42vw, 480px);
   }
@@ -125,7 +119,7 @@ import { learningPath, playgrounds } from '../data/resources';
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    color: var(--color-base);
+    color: var(--color-on-invert);
     max-width: 38ch;
     font-size: 0.95rem;
   }
@@ -229,11 +223,11 @@ import { learningPath, playgrounds } from '../data/resources';
     background:
       radial-gradient(80% 120% at 80% 0%, color-mix(in srgb, var(--color-accent) 55%, transparent), transparent 60%),
       radial-gradient(90% 120% at 0% 100%, color-mix(in srgb, var(--color-mist) 90%, transparent), transparent 55%),
-      var(--color-ink);
+      var(--color-invert);
     overflow: hidden;
   }
   .pcard__dots { position: absolute; top: 0.9rem; left: 0.9rem; display: inline-flex; gap: 0.4rem; }
-  .pcard__dots i { width: 8px; height: 8px; border-radius: 50%; background: color-mix(in srgb, var(--color-base) 40%, transparent); }
+  .pcard__dots i { width: 8px; height: 8px; border-radius: 50%; background: color-mix(in srgb, var(--color-on-invert) 40%, transparent); }
   .pcard__tag {
     position: absolute;
     bottom: 0.9rem; left: 0.9rem;
@@ -241,7 +235,7 @@ import { learningPath, playgrounds } from '../data/resources';
     font-size: 0.7rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-base);
+    color: var(--color-on-invert);
   }
   .pcard__glow {
     position: absolute;

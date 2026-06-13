@@ -42,6 +42,40 @@
 :root {
   --section-pad: clamp(4.5rem, 10vw, 9rem);
   color-scheme: light;
+
+  /* Inverted / feature sections — dark in light mode, elevated-dark in dark mode */
+  --color-invert: #0d0e11;
+  --color-on-invert: #f6f7f9;
+}
+
+/* ============================================================
+   DARK THEME — set via html[data-theme="dark"] (toggle or system).
+   Only the semantic palette flips; accent stays the same.
+   ============================================================ */
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --color-base: #0b0c0f; /* page background */
+  --color-ink: #f3f4f6; /* primary text */
+  --color-slate: #c4c8d1; /* secondary text */
+  --color-muted: #8b919c; /* muted text */
+  --color-paper: #15171c; /* cards / raised surfaces */
+  --color-mist: #1c1f26; /* subtle raised bg */
+  --color-line: #282b34; /* hairlines */
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 20%, #15171c);
+  --color-invert: #15171c; /* feature sections become elevated dark */
+  --color-on-invert: #f3f4f6;
+}
+
+/* Smooth theme transition (only fires on toggle; theme is set pre-paint) */
+body,
+header,
+footer,
+section,
+.card {
+  transition:
+    background-color 0.45s ease,
+    border-color 0.45s ease,
+    color 0.45s ease;
 }
 
 html {
@@ -140,6 +174,68 @@ html.js [data-reveal].is-in {
   max-width: 84rem;
   margin-inline: auto;
   padding-inline: clamp(1.25rem, 5vw, 4rem);
+}
+
+/* Shared section rhythm — GLOBAL so every section gets consistent padding.
+   (Previously these lived in a component's scoped styles, which silently
+   left every other section with zero vertical padding.) */
+.section {
+  padding-block: var(--section-pad);
+}
+.section-head {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.section-title {
+  font-size: var(--text-h2);
+  font-weight: 400;
+  margin: 0.8rem 0 0;
+  letter-spacing: -0.03em;
+}
+.section-intro {
+  margin-top: 1.5rem;
+  max-width: 56ch;
+  color: var(--color-slate);
+  font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  flex: none;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.4s var(--ease-out-expo);
+}
+.theme-toggle:hover {
+  border-color: var(--color-ink);
+  transform: translateY(-2px);
+}
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+}
+.theme-toggle .icon-sun {
+  display: none;
+}
+.theme-toggle .icon-moon {
+  display: block;
+}
+html[data-theme='dark'] .theme-toggle .icon-sun {
+  display: block;
+}
+html[data-theme='dark'] .theme-toggle .icon-moon {
+  display: none;
 }
 
 /* Magnetic / pill buttons */

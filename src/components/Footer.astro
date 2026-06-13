@@ -41,8 +41,8 @@ import { workshops } from '../data/course';
 
 <style>
   .footer {
-    background: var(--color-ink);
-    color: var(--color-base);
+    background: var(--color-invert);
+    color: var(--color-on-invert);
     padding-block: clamp(3.5rem, 7vw, 6rem) 2.5rem;
   }
   .footer__top {
@@ -50,17 +50,17 @@ import { workshops } from '../data/course';
     gap: 2.5rem;
     grid-template-columns: 1fr;
     padding-bottom: 3rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--color-base) 14%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-on-invert) 14%, transparent);
   }
   .footer__logo { font-size: 2rem; font-weight: 500; letter-spacing: -0.04em; }
   .footer__logo span { color: var(--color-accent); }
-  .footer__tag { margin: 0.6rem 0 1rem; color: color-mix(in srgb, var(--color-base) 70%, transparent); font-size: 0.95rem; }
+  .footer__tag { margin: 0.6rem 0 1rem; color: color-mix(in srgb, var(--color-on-invert) 70%, transparent); font-size: 0.95rem; }
   .footer__col { display: flex; flex-direction: column; gap: 0.6rem; }
   .footer__col .eyebrow { color: var(--color-muted); margin-bottom: 0.4rem; }
-  .footer__link { color: color-mix(in srgb, var(--color-base) 85%, transparent); font-size: 0.92rem; transition: color 0.3s ease; }
+  .footer__link { color: color-mix(in srgb, var(--color-on-invert) 85%, transparent); font-size: 0.92rem; transition: color 0.3s ease; }
   .footer__link:hover { color: var(--color-accent-bright); }
-  .footer__workshops { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; color: color-mix(in srgb, var(--color-base) 75%, transparent); font-size: 0.9rem; }
-  .footer__time { font-size: 1.6rem; font-weight: 500; color: var(--color-base); font-variant-numeric: tabular-nums; }
+  .footer__workshops { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; color: color-mix(in srgb, var(--color-on-invert) 75%, transparent); font-size: 0.9rem; }
+  .footer__time { font-size: 1.6rem; font-weight: 500; color: var(--color-on-invert); font-variant-numeric: tabular-nums; }
   .footer__coords { font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-muted); }
   .footer__bottom {
     display: flex;

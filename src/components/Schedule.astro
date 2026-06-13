@@ -35,13 +35,6 @@ import { sessions } from '../data/course';
 </section>
 
 <style>
-  .section-head { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-  .section-title {
-    font-size: var(--text-h2);
-    font-weight: 400;
-    margin: 0.8rem 0 0;
-    letter-spacing: -0.03em;
-  }
   .schedule__list {
     display: grid;
     gap: 1.5rem;
@@ -49,9 +42,9 @@ import { sessions } from '../data/course';
   }
   .sched { padding: clamp(1.6rem, 3vw, 2.5rem); }
   .sched--up {
-    background: var(--color-ink);
-    color: var(--color-base);
-    border-color: var(--color-ink);
+    background: var(--color-invert);
+    color: var(--color-on-invert);
+    border-color: var(--color-invert);
   }
   .sched__head {
     display: flex;
@@ -83,13 +76,13 @@ import { sessions } from '../data/course';
     max-width: 52ch;
     color: var(--color-slate);
   }
-  .sched--up .sched__blurb { color: color-mix(in srgb, var(--color-base) 75%, transparent); }
+  .sched--up .sched__blurb { color: color-mix(in srgb, var(--color-on-invert) 75%, transparent); }
   .sched__materials-link {
     margin-top: 0.4rem;
     padding-top: 1.4rem;
     border-top: 1px solid var(--color-line);
   }
-  .sched--up .sched__materials-link { border-top-color: color-mix(in srgb, var(--color-base) 18%, transparent); }
+  .sched--up .sched__materials-link { border-top-color: color-mix(in srgb, var(--color-on-invert) 18%, transparent); }
   .sched__link {
     display: inline-flex;
     align-items: center;

@@ -3,13 +3,32 @@
    1) Hero backdrop — drifting gradient mesh (Stripe-style, Predli
       palette) + a faint feed-forward neural net with travelling signals.
    2) Learn section — animated self-attention between tokens.
-   Both pause when offscreen and render a single static frame for
-   users who prefer reduced motion.
+   Both pause when offscreen, render a single static frame for users who
+   prefer reduced motion, and re-read their colours on theme change so
+   they look right in both light and dark mode.
    ============================================================ */
 
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 type RAF = { stop: () => void };
+
+/** Read the live theme colours from CSS variables. */
+function readColors() {
+  const cs = getComputedStyle(document.documentElement);
+  const get = (name: string, fallback: string) => {
+    const v = cs.getPropertyValue(name).trim();
+    return v || fallback;
+  };
+  return {
+    ink: get('--color-ink', '#0d0e11'),
+    invert: get('--color-invert', '#0d0e11'),
+    onInvert: get('--color-on-invert', '#f6f7f9'),
+    accent: get('--color-accent', '#d5521a'),
+    accentBright: get('--color-accent-bright', '#f06a2c'),
+    mist: get('--color-mist', '#e7edf3'),
+  };
+}
+let C = readColors();
 
 function setupCanvas(canvas: HTMLCanvasElement) {
   const ctx = canvas.getContext('2d')!;
@@ -20,7 +39,6 @@ function setupCanvas(canvas: HTMLCanvasElement) {
     ctx,
     get w() { return w; },
     get h() { return h; },
-    // Reassigned by the visual so a resize (or font load) can re-render a static frame.
     onResize: (() => {}) as () => void,
     dispose: () => ro.disconnect(),
   };
@@ -36,7 +54,6 @@ function setupCanvas(canvas: HTMLCanvasElement) {
   resize();
   const ro = new ResizeObserver(resize);
   ro.observe(canvas);
-  // Redraw once fonts are ready (chip labels use DM Mono).
   if (document.fonts?.ready) document.fonts.ready.then(() => api.onResize());
   return api;
 }
@@ -65,37 +82,18 @@ function runVisible(canvas: HTMLCanvasElement, frame: (t: number) => void, drawO
   return { stop: () => { if (raf) cancelAnimationFrame(raf); io.disconnect(); } };
 }
 
-const INK = '#0d0e11';
-const ACCENT = '#d5521a';
-const ACCENT_BRIGHT = '#f06a2c';
-const MIST = '#e7edf3';
-
 /* ---------------- Hero backdrop ---------------- */
 function heroNeural(canvas: HTMLCanvasElement) {
   const c = setupCanvas(canvas);
 
-  // Build a layered feed-forward network in normalized coords.
   const layers = [4, 6, 6, 3];
   let nodes: { x: number; y: number }[][] = [];
-  const buildNodes = () => {
-    nodes = layers.map((count, li) => {
-      const x = 0.12 + (li / (layers.length - 1)) * 0.78;
-      return Array.from({ length: count }, (_, ni) => ({
-        x,
-        y: 0.2 + ((ni + 0.5) / count) * 0.6,
-      }));
-    });
-  };
-  buildNodes();
+  nodes = layers.map((count, li) => {
+    const x = 0.12 + (li / (layers.length - 1)) * 0.78;
+    return Array.from({ length: count }, (_, ni) => ({ x, y: 0.2 + ((ni + 0.5) / count) * 0.6 }));
+  });
 
-  // Travelling signals along random edges
-  const signals = Array.from({ length: 14 }, () => ({
-    layer: Math.floor(Math.random() * (layers.length - 1)),
-    from: 0,
-    to: 0,
-    t: Math.random(),
-    speed: 0.003 + Math.random() * 0.004,
-  }));
+  const signals = Array.from({ length: 14 }, () => ({ layer: 0, from: 0, to: 0, t: Math.random(), speed: 0 }));
   const reseed = (s: (typeof signals)[number]) => {
     s.layer = Math.floor(Math.random() * (layers.length - 1));
     s.from = Math.floor(Math.random() * layers[s.layer]);
@@ -105,28 +103,27 @@ function heroNeural(canvas: HTMLCanvasElement) {
   };
   signals.forEach(reseed);
 
-  // Drifting gradient blobs (Stripe-like wash, Predli palette)
-  const blobs = [
-    { hue: ACCENT, x: 0.2, y: 0.3, r: 0.5, dx: 0.00007, dy: 0.00005, a: 0.1 },
-    { hue: MIST, x: 0.8, y: 0.7, r: 0.6, dx: -0.00006, dy: 0.00004, a: 0.5 },
-    { hue: ACCENT_BRIGHT, x: 0.65, y: 0.2, r: 0.35, dx: 0.00005, dy: 0.00006, a: 0.07 },
+  // Drifting gradient blobs — colour resolved from theme at draw time.
+  const blobs: { key: 'accent' | 'mist' | 'accentBright'; x: number; y: number; r: number; dx: number; dy: number; a: number }[] = [
+    { key: 'accent', x: 0.2, y: 0.3, r: 0.5, dx: 0.00007, dy: 0.00005, a: 0.1 },
+    { key: 'mist', x: 0.8, y: 0.7, r: 0.6, dx: -0.00006, dy: 0.00004, a: 0.5 },
+    { key: 'accentBright', x: 0.65, y: 0.2, r: 0.35, dx: 0.00005, dy: 0.00006, a: 0.07 },
   ];
 
-  const draw = (t: number) => {
+  const draw = () => {
     const { ctx, w, h } = c;
     ctx.clearRect(0, 0, w, h);
 
-    // gradient blobs
     blobs.forEach((b) => {
       b.x += b.dx * (REDUCED ? 0 : 16);
       b.y += b.dy * (REDUCED ? 0 : 16);
-      if (b.x < 0 || b.x > 1) b.dx *= -1;
-      if (b.y < 0 || b.y > 1) b.dy *= -1;
+      if (b.x < -0.1 || b.x > 1.1) b.dx *= -1;
+      if (b.y < -0.1 || b.y > 1.1) b.dy *= -1;
       const cx = b.x * w;
       const cy = b.y * h;
       const rad = b.r * Math.max(w, h);
       const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, rad);
-      const col = b.hue;
+      const col = C[b.key];
       g.addColorStop(0, hexA(col, b.a));
       g.addColorStop(1, hexA(col, 0));
       ctx.fillStyle = g;
@@ -138,7 +135,7 @@ function heroNeural(canvas: HTMLCanvasElement) {
     for (let li = 0; li < nodes.length - 1; li++) {
       for (const a of nodes[li]) {
         for (const b of nodes[li + 1]) {
-          ctx.strokeStyle = hexA(INK, 0.06);
+          ctx.strokeStyle = hexA(C.ink, 0.06);
           ctx.beginPath();
           ctx.moveTo(a.x * w, a.y * h);
           ctx.lineTo(b.x * w, b.y * h);
@@ -152,7 +149,7 @@ function heroNeural(canvas: HTMLCanvasElement) {
       for (const n of layer) {
         ctx.beginPath();
         ctx.arc(n.x * w, n.y * h, 3, 0, Math.PI * 2);
-        ctx.fillStyle = hexA(INK, 0.28);
+        ctx.fillStyle = hexA(C.ink, 0.28);
         ctx.fill();
       }
     }
@@ -167,24 +164,25 @@ function heroNeural(canvas: HTMLCanvasElement) {
       const x = (a.x + (b.x - a.x) * s.t) * w;
       const y = (a.y + (b.y - a.y) * s.t) * h;
       const glow = ctx.createRadialGradient(x, y, 0, x, y, 9);
-      glow.addColorStop(0, hexA(ACCENT, 0.9));
-      glow.addColorStop(1, hexA(ACCENT, 0));
+      glow.addColorStop(0, hexA(C.accent, 0.9));
+      glow.addColorStop(1, hexA(C.accent, 0));
       ctx.fillStyle = glow;
       ctx.beginPath();
       ctx.arc(x, y, 9, 0, Math.PI * 2);
       ctx.fill();
       ctx.beginPath();
       ctx.arc(x, y, 2.4, 0, Math.PI * 2);
-      ctx.fillStyle = ACCENT;
+      ctx.fillStyle = C.accent;
       ctx.fill();
     }
   };
 
-  c.onResize = () => { if (REDUCED) draw(0); };
-  return runVisible(canvas, draw, () => draw(0));
+  c.onResize = () => { if (REDUCED) draw(); };
+  document.addEventListener('themechange', () => { C = readColors(); if (REDUCED) draw(); });
+  return runVisible(canvas, draw, draw);
 }
 
-/* ---------------- Self-attention visual ---------------- */
+/* ---------------- Self-attention visual (always on a dark surface) ---------------- */
 function attention(canvas: HTMLCanvasElement) {
   const c = setupCanvas(canvas);
   const tokens = ['The', 'transformer', 'attends', 'to', 'every', 'token', 'at', 'once'];
@@ -192,7 +190,7 @@ function attention(canvas: HTMLCanvasElement) {
   const draw = (time: number) => {
     const { ctx, w, h } = c;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = INK;
+    ctx.fillStyle = C.invert; // dark in both themes
     ctx.fillRect(0, 0, w, h);
 
     const n = tokens.length;
@@ -204,18 +202,16 @@ function attention(canvas: HTMLCanvasElement) {
     const xs = tokens.map((_, i) => padX + i * step);
 
     const t = time * 0.001;
-    // active query cycles through tokens
     const active = Math.floor(t * 0.6) % n;
     const phase = (t * 0.6) % 1;
 
-    // attention arcs: from each bottom token (query) to all top tokens (keys)
     for (let q = 0; q < n; q++) {
       for (let k = 0; k < n; k++) {
-        const base = 0.04 + 0.10 * (1 - Math.abs(q - k) / n);
+        const base = 0.04 + 0.1 * (1 - Math.abs(q - k) / n);
         const isActive = q === active;
         const pulse = isActive ? 0.6 + 0.4 * Math.sin((phase + k / n) * Math.PI * 2) : 0;
         const alpha = base + pulse * 0.5;
-        ctx.strokeStyle = isActive ? hexA(ACCENT_BRIGHT, alpha) : hexA(MIST, base * 0.6);
+        ctx.strokeStyle = isActive ? hexA(C.accentBright, alpha) : hexA(C.onInvert, base * 0.5);
         ctx.lineWidth = isActive ? 1.4 : 0.6;
         const x1 = xs[q];
         const x2 = xs[k];
@@ -227,7 +223,6 @@ function attention(canvas: HTMLCanvasElement) {
       }
     }
 
-    // token chips (keys on top, queries on bottom)
     ctx.font = `500 ${Math.max(11, Math.min(15, w * 0.014))}px "DM Mono", monospace`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -235,12 +230,12 @@ function attention(canvas: HTMLCanvasElement) {
       const tw = ctx.measureText(label).width + 22;
       const th = 26;
       roundRect(ctx, x - tw / 2, y - th / 2, tw, th, 13);
-      ctx.fillStyle = hot ? ACCENT : 'rgba(255,255,255,0.06)';
+      ctx.fillStyle = hot ? C.accent : hexA(C.onInvert, 0.06);
       ctx.fill();
-      ctx.strokeStyle = hot ? ACCENT : 'rgba(255,255,255,0.18)';
+      ctx.strokeStyle = hot ? C.accent : hexA(C.onInvert, 0.18);
       ctx.lineWidth = 1;
       ctx.stroke();
-      ctx.fillStyle = hot ? '#fff' : 'rgba(246,247,249,0.85)';
+      ctx.fillStyle = hot ? '#fff' : hexA(C.onInvert, 0.85);
       ctx.fillText(label, x, y);
     };
     tokens.forEach((tok, i) => drawChip(xs[i], topY, tok, false));
@@ -248,6 +243,7 @@ function attention(canvas: HTMLCanvasElement) {
   };
 
   c.onResize = () => { if (REDUCED) draw(1200); };
+  document.addEventListener('themechange', () => { C = readColors(); if (REDUCED) draw(1200); });
   return runVisible(canvas, draw, () => draw(1200));
 }
 
@@ -270,6 +266,7 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
 }
 
 export function initCanvas() {
+  C = readColors();
   const hero = document.querySelector<HTMLCanvasElement>('[data-neural]');
   if (hero) heroNeural(hero);
   const att = document.querySelector<HTMLCanvasElement>('[data-attention]');

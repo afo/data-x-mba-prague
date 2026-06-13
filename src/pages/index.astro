@@ -37,9 +37,11 @@ import Footer from '../components/Footer.astro';
   import { initMotion } from '../scripts/motion';
   import { initClock } from '../scripts/clock';
   import { initCanvas } from '../scripts/neural-canvas';
+  import { initTheme } from '../scripts/theme';
   import { site } from '../data/site';
 
   function boot() {
+    initTheme();
     initClock(site.geo.tz);
     initCanvas();
     initMotion();

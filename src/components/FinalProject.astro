@@ -47,30 +47,30 @@ import { finalPresentation, grading } from '../data/course';
 </section>
 
 <style>
-  .project { background: var(--color-ink); color: var(--color-base); }
+  .project { background: var(--color-invert); color: var(--color-on-invert); }
   .project .eyebrow { color: var(--color-muted); }
   .project__grid {
     display: grid;
     gap: clamp(2.5rem, 5vw, 4.5rem);
     grid-template-columns: 1fr;
   }
-  .project .section-title { color: var(--color-base); }
+  .project .section-title { color: var(--color-on-invert); }
   .project__lede {
     margin-top: 1.5rem;
     max-width: 44ch;
-    color: color-mix(in srgb, var(--color-base) 78%, transparent);
+    color: color-mix(in srgb, var(--color-on-invert) 78%, transparent);
     font-size: clamp(1.05rem, 1.5vw, 1.3rem);
   }
 
   .rubric { margin-top: clamp(2.5rem, 5vw, 4rem); }
   .rubric__list { list-style: none; margin: 1.2rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 1.3rem; }
   .rubric__row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; }
-  .rubric__label { font-size: 0.98rem; color: color-mix(in srgb, var(--color-base) 85%, transparent); }
+  .rubric__label { font-size: 0.98rem; color: color-mix(in srgb, var(--color-on-invert) 85%, transparent); }
   .rubric__pct { font-size: 1.3rem; font-weight: 500; color: var(--color-accent-bright); }
   .rubric__bar {
     height: 4px;
     border-radius: 999px;
-    background: color-mix(in srgb, var(--color-base) 14%, transparent);
+    background: color-mix(in srgb, var(--color-on-invert) 14%, transparent);
     overflow: hidden;
   }
   .rubric__fill {
@@ -97,7 +97,7 @@ import { finalPresentation, grading } from '../data/course';
     align-items: baseline;
     gap: 1.2rem;
     padding: 1.1rem 0;
-    border-bottom: 1px solid color-mix(in srgb, var(--color-base) 14%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-on-invert) 14%, transparent);
     transition: padding-left 0.4s var(--ease-out-expo);
   }
   .checklist__item:hover { padding-left: 0.6rem; }
