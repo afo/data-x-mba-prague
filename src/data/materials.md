@@ -22,6 +22,9 @@ title: Course materials
 ## June 2026 · Day 2 — Saturday
 - [Lecture slides](https://docs.google.com/presentation/d/17n6jGe-xDnAe2T9mz0EFGUmVKYRcV2vcp2S-65nr80g/)
 
+## June 2026 - Day 3 - Sunday
+- [Slides](https://docs.google.com/presentation/d/1REx3Um_-JFpqPyH0za86rby-wNrN3B5nn37ZanzzqKU/)
+
 ## November 2025
 - [Day 1 — Slides](https://docs.google.com/presentation/d/18hQDZ2fmXt_OOeSE0viE09cnlMb7p2gIh3a9ERjUew8/)
 - [Day 1 — Problem set](https://docs.google.com/document/u/1/d/1pLVd4G-IlOxJaYZZQuhUeON04Nv7KWPtF2-uOgzKWaU/edit?tab=t.w6w73xh9ptzd#heading=h.huxu5m7gzrfb)
